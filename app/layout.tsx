@@ -1,8 +1,9 @@
-import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
-import "./globals.css";
+import { Footer } from "@/components/sections/footer";
 import { Header } from "@/components/sections/header";
 import { siteConfig } from "@/utils/meta";
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
 
 const font = Inter({
   variable: "--font-inter",
@@ -16,9 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${font.variable} antialiased`}>
+      <body className={`${font.variable} h-[100dvh] antialiased`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -27,15 +27,16 @@ export const MobileHeader = ({ children }: MobileHeaderProps) => {
     <div className="relative lg:hidden ">
       <button
         onClick={toggleMenu}
-        className="relative z-100 w-10 h-10 rounded-full text-ryl-b  flex items-center justify-center"
+        className="relative z-100 w-10 h-10 rounded-full text-royal  flex items-center justify-center"
       >
         <MenuIcon {...{ isOpen }} size={24} />
       </button>
 
       <Accordion aria-hidden={!isOpen} type="single" collapsible>
+        {/* todo: work `wrapper`` */}
         <nav
           className={cx(
-            "fixed bg-white h-0  w-[100dvw]  overflow-scroll transition-[height] duration-500    inset-0 top-[62px] z-20 lg:hidde",
+            "fixed bg-white h-0 w-[100dvw] overflow-scroll transition-[height] duration-500 inset-0 top-[62px] z-20 lg:hidden",
             {
               // "clip-reveal-open": !isOpen,
               "h-[calc(100dvh-62px)]": isOpen,

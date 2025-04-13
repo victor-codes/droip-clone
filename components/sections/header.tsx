@@ -8,7 +8,7 @@ import {
 import Link from "next/link";
 import { Fragment } from "react";
 import { Logo } from "../shared/logo";
-import { DropdownArrow } from "../svgs/dropdownArrow";
+import { DropdownArrow } from "../svgs/dropdown-arrow";
 import { ActiveLink } from "../ui/active-link";
 import { MobileHeader } from "../ui/mobile-header";
 import { NavItemWithDropdown } from "../ui/nav";
@@ -17,7 +17,7 @@ export const Header = () => {
   return (
     <header>
       <div className="py-2 bg-white lg:bg-transparent lg:py-3">
-        <div className="max-w-[1360px] text-sm font-medium text-smoky mx-auto px-4 h-11 flex justify-between items-center">
+        <div className="wrapper text-sm font-medium text-smoky mx-auto h-11 flex justify-between items-center">
           <div className="flex space-x-16 items-center">
             <div className="relative z-10 w-16">
               <Logo />
@@ -75,7 +75,7 @@ export const Header = () => {
               >
                 <span className="relative z-[1]">{label}</span>
                 {isPrimary && (
-                  <div className="absolute group-hover:scale-y-[1.167] transition-transform ease-out duration-300 w-full h-full rounded-xl top-1/2 transform -translate-y-1/2 left-0  bg-ryl-b py-2 px-4" />
+                  <div className="absolute group-hover:scale-y-[1.167] transition-transform ease-out duration-300 w-full h-full rounded-xl top-1/2 transform -translate-y-1/2 left-0  bg-royal py-2 px-4" />
                 )}
               </Link>
             ))}

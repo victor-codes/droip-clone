@@ -1,17 +1,10 @@
 "use client";
 
+import { cx } from "@/lib";
 import type { Variants } from "motion/react";
 import { motion, useAnimation } from "motion/react";
 import type { HTMLAttributes } from "react";
-import {
-  forwardRef,
-  use,
-  useCallback,
-  useEffect,
-  useImperativeHandle,
-  useRef,
-} from "react";
-import { cx } from "@/lib";
+import { forwardRef, useEffect, useImperativeHandle, useRef } from "react";
 
 export interface MenuIconHandle {
   startAnimation: () => void;
@@ -42,10 +35,7 @@ const lineVariants: Variants = {
 };
 
 const MenuIcon = forwardRef<MenuIconHandle, MenuIconProps>(
-  (
-    { onMouseEnter, onMouseLeave, className, size = 28, isOpen, ...props },
-    ref
-  ) => {
+  ({ className, size = 28, isOpen, ...props }, ref) => {
     const controls = useAnimation();
     const isControlledRef = useRef(false);
 

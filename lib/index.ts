@@ -1,3 +1,5 @@
+export const isBrowser = typeof window !== "undefined";
+
 export const getUUID = () => {
   if (
     typeof crypto !== "undefined" &&

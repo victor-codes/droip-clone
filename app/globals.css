@@ -11,7 +11,9 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-smoky: #605c7a;
-  --color-ryl-b: #5641f3;
+  --color-royal: #5641f3;
+  --color-royal-700: #551a8b;
+  --color-royal-800: #9353ff;
   --color-athens: #f5f5f7;
 }
 
@@ -25,6 +27,9 @@
     --background: #f5f5f7;
     --foreground: #171717;
   }
+}
+.wrapper {
+  @apply max-w-[640px]  md:max-w-[1360px] mx-auto px-4;
 }
 
 body {
