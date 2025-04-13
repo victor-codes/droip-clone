@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f5f7;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-smoky: #605c7a;
+  --color-ryl-b: #5641f3;
+  --color-athens: #f5f5f7;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  } */
+
+  :root {
+    --background: #f5f5f7;
+    --foreground: #171717;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter);
+}
+
+.clip-reveal {
+  /* opacity: 0; */
+}
+
+.clip-reveal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-white);
+  z-index: 100;
+  transition: clip-path 0.5s ease-in-out;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.clip-reveal-close::before {
+  clip-path: polygon(0 0, 100% 0, 100% 0%, 0% 0%);
+
+  /* clip-path: polygon(0 60px, 100% 60px, 100% 0, 0 0); */
+  /* z-index: -1; */
+
+  /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
+}
+/*
+.clip-reveal-open::before {
+  /* clip-path: polygon(0 0, 100% 0, 100% 60px, 0% 60px); */
+/* clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); */
+/* } */
+
+.clip-reveal-close {
+  /* animation: hide 300ms ease-out both; */
+  /* clip-path: polygon(0 0, 100% 0, 100% 0%, 0% 0%); */
+  /* clip-path: polygon(0 60px, 100% 60px, 100% 0, 0 0); */
+}
+
+@keyframes hide {
+  0% {
+    display: block;
+  }
+  100% {
+    opacity: 1;
+
+    /* clip-path: polygon(0 60px, 100% 60px, 100% 0, 0 0); */
+    /* z-index: -1; */
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); */
+    /* z-index: -1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); */
+    /* z-index: -1; */
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); */
+  }
+}
