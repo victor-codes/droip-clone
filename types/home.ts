@@ -4,3 +4,13 @@ export type DesignBuildItemProps = {
   imageUrl: string; // Image src URL
   column: number;
 };
+
+export type LowDepsItemProps = {
+  id: string;
+  type: "video" | "text";
+  title?: string;
+  mediaUrl?: string;
+  description?: string;
+  icon?: React.ComponentType;
+  column: number;
+};

@@ -1,8 +1,7 @@
 "use client";
 import { useLerpMousePosition } from "@/hooks/use-lerp-mos-pos";
-import { lerp } from "@/lib";
 import Image from "next/image";
-import { useState, useRef, useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export const Performance = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -21,12 +20,12 @@ export const Performance = () => {
     <section>
       <div
         ref={ref}
-        className="perf-parent relative bg-black overflow-clip section"
+        className="perf-parent relative bg-black overflow-clip section mb-15"
         onMouseMove={onMouseMove}
       >
         <div className="wrapper text-white">
           <div className="relative mb-16 md:mb-12 lap:mb-32 z-[1]">
-            <h2 className="text-[46px]  text-center lap:text-[64px] text-balance font-semibold -tracking-[2px] lap:-tracking-[3.2px] leading-[1.1]">
+            <h2 className="section-title-sm text-center">
               Performance that <br /> sets you apart
             </h2>
           </div>

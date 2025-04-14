@@ -22,7 +22,56 @@ import {
   AppTileIcon8,
   AppTileIcon9,
 } from "@/components/svgs/app-tiles";
-import { DesignBuildItemProps } from "@/types/home";
+import { LDCostEffIcon } from "@/components/svgs/low-deps/cost-eff-icon";
+import { LDGridIcon } from "@/components/svgs/low-deps/grid-icon";
+import { LDSecureIcon } from "@/components/svgs/low-deps/secure-icon";
+import { LDWorkflowIcon } from "@/components/svgs/low-deps/workflow-icon";
+import { DesignBuildItemProps, LowDepsItemProps } from "@/types/home";
+
+export const LOW_DEPS_DATA: LowDepsItemProps[] = [
+  {
+    id: "control",
+    type: "text",
+    icon: LDGridIcon,
+    title: "More control, less reliance",
+    description:
+      "Get complete control over your website's performance and aesthetics without extra plugins.",
+    column: 1,
+  },
+  {
+    id: "video",
+    type: "video",
+    mediaUrl: "https://droip.com/wp-content/uploads/2025/03/PanzerV3.mp4#t=0,0",
+    column: 2,
+  },
+  {
+    id: "cost",
+    type: "text",
+    icon: LDCostEffIcon,
+    title: "Cost-effective",
+    description:
+      "Reduce ongoing costs with built-in tools that let you scale seamlessly without extra expenses.",
+    column: 3,
+  },
+  {
+    id: "workflow",
+    type: "text",
+    icon: LDWorkflowIcon,
+    title: "Simplified workflow",
+    description:
+      "With everything built in, your design process is streamlined, efficient, and hassle-free.",
+    column: 0,
+  },
+  {
+    id: "secure",
+    type: "text",
+    icon: LDSecureIcon,
+    title: "Streamlined & secure",
+    description:
+      "Fewer external plugins mean fewer vulnerabilities, keeping your site secure and lightweight.",
+    column: 0,
+  },
+];
 
 export const APP_INTEGRATION_DATA: (React.ComponentType | string)[] = [
   AppTileIcon1,

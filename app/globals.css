@@ -47,7 +47,8 @@
     @apply text-[46px] lap:text-8xl text-balance font-semibold -tracking-[3px] lap:-tracking-[5px] leading-[1.1];
   }
 
-  .section-title {
+  .section-title-sm {
+    @apply text-[46px] lap:text-[64px] text-balance font-semibold -tracking-[2px] lap:-tracking-[3.2px] leading-[1.1]; 
   }
 
   .section {
