@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export const DesignBuild = () => {
   return (
-    <section className="py-16 md:py-18 lap:py-32 overflow-clip">
+    <section className="section">
       <div className="wrapper">
         <div>
           <h2>
@@ -25,7 +25,7 @@ export const DesignBuild = () => {
             <DesignBuildItem {...item} key={idx} />
           ))}
 
-          <div className="absolute w-3/4 h-full transform -translate-x-1/2 left-1/2  bg-royal blur-[144px] opacity-30" />
+          <div className="absolute w-3/4 h-full transform -translate-x-1/2 left-1/2  bg-royal blur-[144px] opacity-20" />
         </div>
       </div>
     </section>
