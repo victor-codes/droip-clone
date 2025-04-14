@@ -59,7 +59,7 @@ const ArrowRightIcon = forwardRef<ArrowRightIconHandle, ArrowRightIconProps>(
     return (
       <div
         className={cx(
-          `transform group-hover:-translate-x-0 -translate-x-2 ease select-none pointer-events-none rounded-md duration-300 flex items-center justify-center relative z-[1]`,
+          `transform group-hover:-translate-x-0 -translate-x-1 ease select-none pointer-events-none rounded-md duration-300 flex items-center justify-center relative z-[1]`,
           className
         )}
         {...props}

@@ -36,7 +36,7 @@ export const MobileHeader = ({ children }: MobileHeaderProps) => {
         {/* todo: work `wrapper`` */}
         <nav
           className={cx(
-            "fixed bg-white h-0 w-[100dvw] overflow-scroll transition-[height] duration-500 inset-0 top-[62px] z-20 lg:hidden",
+            "fixed bg-white/86 backdrop-blur-lg h-0 w-[100dvw] overflow-scroll transition-[height] duration-500 inset-0 top-[62px] z-20 lg:hidden",
             {
               // "clip-reveal-open": !isOpen,
               "h-[calc(100dvh-62px)]": isOpen,

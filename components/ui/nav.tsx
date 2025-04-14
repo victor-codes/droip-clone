@@ -7,11 +7,11 @@ import {
 } from "@radix-ui/react-accordion";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 import {
+  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuTrigger,
-  NavigationMenuContent,
 } from "@radix-ui/react-navigation-menu";
-import { use, useId } from "react";
+import { useId } from "react";
 
 export const NavItemWithDropdown = ({ label, subMenu }: NavItemProps) => {
   return (
@@ -28,12 +28,12 @@ export const NavItemWithDropdown = ({ label, subMenu }: NavItemProps) => {
       </NavigationMenuTrigger>
 
       <NavigationMenuContent>
-        <div className="absolute left-0 mt-2.5 w-max backdrop-blur-lg   bg-white/56 rounded-xl  p-6 grid grid-cols-2  gap-x-4.5 gap-y-2  z-50">
+        <div className="absolute left-0 mt-2.5 w-max backdrop-blur-lg   bg-white/86 rounded-xl  p-6 grid grid-cols-2  gap-x-4.5 gap-y-2  z-50">
           {/* todo: change to key to link from href */}
           {subMenu!.map(({ icon: Icon, label, description }, idx) => (
             <div
               key={idx}
-              className="flex items-start gap-6 min-w-[304px] hover:bg-[#ebe8fe]  rounded-2xl p-4 transition"
+              className="flex items-start gap-6 min-w-[304px] hover:bg-royal-100  rounded-2xl p-4 transition"
             >
               {/* <div className="w-6 h-6"> */}
               <Icon />
@@ -73,7 +73,7 @@ export const MobileNavItemWithDropdown = ({ label, subMenu }: NavItemProps) => {
           {subMenu!.map(({ icon: Icon, label }, idx) => (
             <div
               key={idx}
-              className="flex items-center py-4 px-3 gap-x-4.5  hover:bg-[#ebe8fe]"
+              className="flex items-center py-4 px-3 gap-x-4.5  hover:bg-royal-100"
             >
               <div className="w-4.5 h-4.5 flex items-center justify-center">
                 <Icon />

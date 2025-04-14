@@ -6,11 +6,11 @@ import { FooterColumn, FooterOnboard, Socials } from "../ui/footer";
 export const Footer = () => {
   const firstIdxExclude = footerData.slice(1);
   return (
-    <footer className="block pt-13 pb-4 min-[575px]:pb-8 min-[575px]:pt-16  min-[992px]:py-0">
+    <footer className="block pt-13 pb-4 tab:pb-8 tab:pt-16  lap:py-0">
       <FooterOnboard />
       <div className="wrapper text-smoky">
-        <div className="py-8 min-[575px]:my-8 md:py-0 md:my-0">
-          <nav className="grid gap-y-12 gap-x-6 min-[575px]:gap-y-8  md:gap-8 grid-cols-2 md:grid-cols-5">
+        <div className="py-8 tab:my-8 md:py-0 md:my-0">
+          <nav className="grid gap-y-12 gap-x-6 tab:gap-y-8  md:gap-8 grid-cols-2 md:grid-cols-5">
             <Socials />
             {firstIdxExclude.map((column, idx) => (
               <FooterColumn key={idx} {...column} />

@@ -3,7 +3,7 @@ import { footerData } from "@/contents/footer";
 import { cx } from "@/lib";
 import { FooterColumnProps, SocialsProps } from "@/types/footer";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowRightIcon } from "../svgs/arrow-right";
 
 export const FooterColumn = ({ title, links }: FooterColumnProps) => {
@@ -15,7 +15,7 @@ export const FooterColumn = ({ title, links }: FooterColumnProps) => {
           <li key={idx}>
             <a
               href={href}
-              className="block text-xs min-[575px]:text-sm leading-[1.42] min-[992px]:text-base min-[992px]:leading-[1.5] hover:text-black tracking-[-0.16px"
+              className="block text-xs tab:text-sm leading-[1.42] lap:text-base lap:leading-[1.5] hover:text-black tracking-[-0.16px"
             >
               {name}
             </a>
@@ -76,6 +76,8 @@ export const FooterOnboard = () => {
   const [pos, setPos] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
 
+  const ref = useRef<HTMLDivElement>(null);
+
   // todo: look into the link animation
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const bounds = e.currentTarget.getBoundingClientRect();
@@ -83,6 +85,13 @@ export const FooterOnboard = () => {
     const y = e.clientY - bounds.top;
     setPos({ x, y });
   };
+
+  useEffect(() => {
+    const bounds = ref.current!.getBoundingClientRect();
+    const x = bounds.left;
+    const y = bounds.top;
+    setPos({ x, y });
+  }, []);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -94,17 +103,18 @@ export const FooterOnboard = () => {
 
   return (
     <section>
-      <div className="wrapper mb-24 min-[992px]:mb-36 ">
+      <div className="wrapper mb-24 lap:mb-36 ">
         <div
+          ref={ref}
           onMouseMove={handleMouseMove}
-          className="relative flex flex-col md:flex-row items-start min-[992px]:items-center justify-between p-8 gap-8 bg-black min-[992px]:p-16 rounded-[18px] overflow-hidden"
+          className="relative flex flex-col md:flex-row items-start lap:items-center justify-between p-8 gap-8 bg-black lap:p-16 rounded-[18px] overflow-hidden"
         >
-          <h2 className="relative z-1 text-white text-4xl min-[992px]:text-[64px] font-medium leading-none tracking-[-3px]">
+          <h2 className="relative z-1 text-white text-4xl lap:text-[64px] font-medium leading-none tracking-[-3px]">
             Get Started <br /> For Free
           </h2>
 
           <div className="relative z-1 grid gap-y-8 md:max-w-[364px]">
-            <p className="text-white text-xs min-[992px]:text-base leading-5">
+            <p className="text-white text-xs lap:text-base leading-5">
               Experience the power of Droip no-code website builder, risk free.
               Create stunning, responsive sites with pure creative freedom.
             </p>
@@ -115,7 +125,7 @@ export const FooterOnboard = () => {
               onMouseLeave={handleMouseLeave}
               className="group relative h-11 flex space-x-[5px] justify-center px-11 py-2 rounded-[18px] text-white"
             >
-              <span className="min-[992px]:text-[18px] relative z-[1]">
+              <span className="lap:text-[18px] relative z-[1]">
                 Try for Free
               </span>{" "}
               <ArrowRightIcon isHovered={isHovered} size={18} />
