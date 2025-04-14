@@ -5,6 +5,7 @@ import { FooterColumnProps, SocialsProps } from "@/types/footer";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { ArrowRightIcon } from "../svgs/arrow-right";
+import { useLerpMousePosition } from "@/hooks/use-lerp-mos-pos";
 
 export const FooterColumn = ({ title, links }: FooterColumnProps) => {
   return (
@@ -73,25 +74,22 @@ export const Socials = ({ isMobile }: SocialsProps) => {
 };
 
 export const FooterOnboard = () => {
-  const [pos, setPos] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
+
+  const { lerped, onMouseMove, setTarget, setLerped } =
+    useLerpMousePosition(0.1);
 
   const ref = useRef<HTMLDivElement>(null);
 
   // todo: look into the link animation
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const bounds = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - bounds.left;
-    const y = e.clientY - bounds.top;
-    setPos({ x, y });
-  };
 
   useEffect(() => {
-    const bounds = ref.current!.getBoundingClientRect();
-    const x = bounds.left;
-    const y = bounds.top;
-    setPos({ x, y });
-  }, []);
+    if (!ref.current) return;
+    const bounds = ref.current.getBoundingClientRect();
+    const center = { x: bounds.width / 2, y: bounds.height / 2 };
+    setTarget(center);
+    setLerped(center);
+  }, [setTarget, setLerped]);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -106,7 +104,7 @@ export const FooterOnboard = () => {
       <div className="wrapper mb-24 lap:mb-36 ">
         <div
           ref={ref}
-          onMouseMove={handleMouseMove}
+          onMouseMove={onMouseMove}
           className="relative flex flex-col md:flex-row items-start lap:items-center justify-between p-8 gap-8 bg-black lap:p-16 rounded-18 overflow-hidden"
         >
           <h2 className="relative z-1 text-white text-4xl lap:text-[64px] font-medium leading-none tracking-[-3px]">
@@ -134,7 +132,7 @@ export const FooterOnboard = () => {
           </div>
           <div
             style={{
-              transform: `translate(${pos.x}px, ${pos.y}px) translate(-50%, -50%)`,
+              transform: `translate(${lerped.x}px, ${lerped.y}px) translate(-50%, -50%)`,
             }}
             className="flex items-center justify-center absolute w-full h-full top-0 left-0 pointer-events-none transition-transform duration-0 ease-out"
           >

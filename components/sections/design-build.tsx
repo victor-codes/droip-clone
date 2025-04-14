@@ -9,7 +9,7 @@ export const DesignBuild = () => {
     <section className="section">
       <div className="wrapper">
         <div>
-          <h2>
+          <h2 className="section-title">
             Design and <br /> build everything
           </h2>
 

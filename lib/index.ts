@@ -53,6 +53,10 @@ export const cx = (
   return mergeClasses(classes);
 };
 
+export const lerp = (start: number, end: number, t: number) => {
+  return start + (end - start) * t;
+};
+
 export const defaultTransition = {
   // ease: [0.77, 0, 0.175, 1],
   ease: [0.25, 0.46, 0.45, 0.94],

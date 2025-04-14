@@ -37,12 +37,17 @@
   --color-royal-800: #9353ff;
 
   --radius-18: 1.125rem;
+
+  --ease-initial: ease;
 }
 
 @layer components {
   h1,
-  h2 {
-    @apply text-[46px] lap:text-8xl text-balance  font-semibold tracking-[-3px] lap:tracking-[-5px] leading-[1.1];
+  .section-title {
+    @apply text-[46px] lap:text-8xl text-balance font-semibold -tracking-[3px] lap:-tracking-[5px] leading-[1.1];
+  }
+
+  .section-title {
   }
 
   .section {
@@ -51,6 +56,21 @@
 
   .wrapper {
     @apply max-md:!max-w-[640px] max-lap:max-w-[820px] px-4 tab:px-5  lap:max-w-[1360px] mx-auto;
+  }
+}
+
+@layer utilities {
+  .group-hover-child-not-hover-opacity-100 {
+    @apply opacity-0 transition-opacity;
+
+    /* Manual CSS to handle advanced selector */
+    .group:hover & {
+      opacity: 1;
+    }
+
+    .group:hover &:hover {
+      opacity: 0; /* cancel if the child is hovered */
+    }
   }
 }
 
@@ -136,4 +156,17 @@ body {
     var(--color-royal) 62%,
     var(--color-royal) 100%
   );
+}
+
+.perf-parent:hover .perf-child {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Default state of the child (hidden or off-screen) */
+.perf-child {
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }

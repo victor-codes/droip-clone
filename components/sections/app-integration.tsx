@@ -8,7 +8,7 @@ export const AppIntegration = () => {
     <section className="section">
       <div className="wrapper">
         <div>
-          <h2>App integration</h2>
+          <h2 className="section-title">App <br /> integration</h2>
 
           <SectionGradient>
             Connect your go-to apps effortlessly within the builder for a smooth
