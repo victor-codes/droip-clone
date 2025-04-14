@@ -35,8 +35,16 @@
   --color-royal-600: #7867f5; /* Regal Amethyst icon */
   --color-royal-700: #551a8b;
   --color-royal-800: #9353ff;
+
+  --radius-18: 1.125rem;
 }
 
+@layer components {
+  h1,
+  h2 {
+    @apply text-[46px] lap:text-8xl text-balance  font-semibold tracking-[-3px] lap:tracking-[-5px] leading-[1.1];
+  }
+}
 @media (prefers-color-scheme: dark) {
   /* :root {
     --background: #0a0a0a;
@@ -109,4 +117,13 @@ body {
     /* z-index: -1; */
     /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); */
   }
+}
+
+.section-grad-line {
+  background-image: linear-gradient(
+    90deg,
+    rgba(86, 65, 243, 0) 0%,
+    var(--color-royal) 62%,
+    var(--color-royal) 100%
+  );
 }

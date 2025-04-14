@@ -107,7 +107,7 @@ export const FooterOnboard = () => {
         <div
           ref={ref}
           onMouseMove={handleMouseMove}
-          className="relative flex flex-col md:flex-row items-start lap:items-center justify-between p-8 gap-8 bg-black lap:p-16 rounded-[18px] overflow-hidden"
+          className="relative flex flex-col md:flex-row items-start lap:items-center justify-between p-8 gap-8 bg-black lap:p-16 rounded-18 overflow-hidden"
         >
           <h2 className="relative z-1 text-white text-4xl lap:text-[64px] font-medium leading-none tracking-[-3px]">
             Get Started <br /> For Free
@@ -123,7 +123,7 @@ export const FooterOnboard = () => {
               href="#"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
-              className="group relative h-11 flex space-x-[5px] justify-center px-11 py-2 rounded-[18px] text-white"
+              className="group relative h-11 flex space-x-[5px] justify-center px-11 py-2 rounded-18 text-white"
             >
               <span className="lap:text-[18px] relative z-[1]">
                 Try for Free
@@ -138,7 +138,7 @@ export const FooterOnboard = () => {
             }}
             className="flex items-center justify-center absolute w-full h-full top-0 left-0 pointer-events-none transition-transform duration-0 ease-out"
           >
-            <div className="w-[45.75rem] h-[31rem] bg-royal blur-[144px] opacity-60"></div>
+            <div className="w-[45.75rem] h-[31rem] bg-royal blur-[144px] opacity-60" />
           </div>
         </div>
       </div>

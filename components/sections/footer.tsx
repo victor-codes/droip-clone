@@ -6,7 +6,7 @@ import { FooterColumn, FooterOnboard, Socials } from "../ui/footer";
 export const Footer = () => {
   const firstIdxExclude = footerData.slice(1);
   return (
-    <footer className="block pt-13 pb-4 tab:pb-8 tab:pt-16  lap:py-0">
+    <footer className="block pt-13 pb-4 tab:pb-8 tab:pt-16 lap:py-0">
       <FooterOnboard />
       <div className="wrapper text-smoky">
         <div className="py-8 tab:my-8 md:py-0 md:my-0">

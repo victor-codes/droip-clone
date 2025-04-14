@@ -29,7 +29,7 @@ export const Hero = () => {
           <div className="flex flex-col md:flex-row lap:items-center lap:justify-between gap-y-12 mt-6 md:mt-12 mb-15 md:mb-24 ">
             <div>
               {/* text-balance */}
-              <h1 className="text-[46px] lap:text-8xl text-balance max-md:max-w-[400px] font-semibold tracking-[-3px] lap:tracking-[-5px] leading-[1.1] ">
+              <h1 className="max-md:max-w-[400px]">
                 Break Limits. Build{" "}
                 <strong className="font-medium text-royal inline tracking-[-3px] lap:tracking-[-5px]">
                   Anything
@@ -39,14 +39,14 @@ export const Hero = () => {
             </div>
 
             <div className="grid gap-y-1 w-full max-md:max-w-[420px] md:max-w-[320px] lap:max-w-[316px]">
-              <div className="md:p-6 lap:pb-20 md:bg-royal-100 rounded-[18px] max-md:mb-3.5">
+              <div className="md:p-6 lap:pb-20 md:bg-royal-100 rounded-18 max-md:mb-3.5">
                 <p className="text-lg text-smoky leading-[1.4] tracking-[-0.36px]">
                   Droip is a no-code, drag-and-drop WordPress builder that
                   simplifies website creation with powerful capabilities.
                 </p>
               </div>
               <div>
-                <button className="flex items-center gap-x-1.5 justify-center h-11 w-full bg-royal-100 hover:bg-royal-150 rounded-[18px]">
+                <button className="flex items-center gap-x-1.5 justify-center h-11 w-full bg-royal-100 hover:bg-royal-150 rounded-18">
                   <span className="text-royal font-semibold">Watch Intro</span>
                   <PlayIcon />
                 </button>
@@ -56,14 +56,14 @@ export const Hero = () => {
                   href="#"
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
-                  className="group relative h-11 flex space-x-[5px] justify-center px-11 py-2 rounded-[18px] text-white mt-1"
+                  className="group relative h-11 flex space-x-[5px] justify-center px-11 py-2 rounded-18 text-white mt-1"
                 >
                   <span className="lap:text-[18px] relative z-[1]">
                     Get started with Droip
                   </span>
 
                   <ArrowRightIcon isHovered={isHovered} size={18} />
-                  <div className="absolute group-hover:scale-y-[1.18]  group-hover:scale-x-[0.98] transition-transform ease-out duration-300 w-full h-full rounded-[18px] top-1/2 transform -translate-y-1/2 left-0  bg-royal py-2 px-4" />
+                  <div className="absolute group-hover:scale-y-[1.18]  group-hover:scale-x-[0.98] transition-transform ease-out duration-300 w-full h-full rounded-18 top-1/2 transform -translate-y-1/2 left-0  bg-royal py-2 px-4" />
                 </Link>
               </div>
             </div>
