@@ -1,9 +1,9 @@
 "use client";
+import { CirclePlayIcon } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { ArrowRightIcon } from "../svgs/arrow-right";
-import { PlayIcon } from "../svgs/play-icon";
-import Link from "next/link";
-import Image from "next/image";
 
 export const Hero = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -48,7 +48,11 @@ export const Hero = () => {
               <div>
                 <button className="flex items-center gap-x-1.5 justify-center h-11 w-full bg-royal-100 hover:bg-royal-150 rounded-18">
                   <span className="text-royal font-semibold">Watch Intro</span>
-                  <PlayIcon />
+                  <CirclePlayIcon
+                    size={21}
+                    color="#5641f3"
+                    strokeWidth={1.75}
+                  />
                 </button>
               </div>
               <div>

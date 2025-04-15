@@ -6,10 +6,29 @@
 }
 
 @theme {
-  /* --breakpoint-*: initial; */
   --breakpoint-tab: 35.9375rem;
   --breakpoint-lap: 62rem;
-  /* --breakpoint-desktop: 80rem; */
+
+  --animate-slideDown: slideDown 500ms ease-in-out;
+  --animate-slideUp: slideUp 500ms ease-in-out;
+
+  @keyframes slideDown {
+    from {
+      height: 0px;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0px;
+    }
+  }
 }
 
 @theme inline {
@@ -48,7 +67,7 @@
   }
 
   .section-title-sm {
-    @apply text-[46px] lap:text-[64px] text-balance font-semibold -tracking-[2px] lap:-tracking-[3.2px] leading-[1.1]; 
+    @apply text-[46px] lap:text-[64px] text-balance font-semibold -tracking-[2px] lap:-tracking-[3.2px] leading-[1.1];
   }
 
   .section {

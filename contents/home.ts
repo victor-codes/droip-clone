@@ -26,7 +26,101 @@ import { LDCostEffIcon } from "@/components/svgs/low-deps/cost-eff-icon";
 import { LDGridIcon } from "@/components/svgs/low-deps/grid-icon";
 import { LDSecureIcon } from "@/components/svgs/low-deps/secure-icon";
 import { LDWorkflowIcon } from "@/components/svgs/low-deps/workflow-icon";
-import { DesignBuildItemProps, LowDepsItemProps } from "@/types/home";
+import {
+  DesignBuildItemProps,
+  FeaturesListItemProps,
+  LowDepsItemProps,
+} from "@/types/home";
+
+export const BEYOND_ORDINARY_DATA: FeaturesListItemProps[] = [
+  {
+    id: crypto.randomUUID(),
+    title: "Advanced typography",
+    description:
+      "Take full control over your text with precision typography tools. Adjust fonts, spacing, and styles to add more character to your design.",
+    link: {
+      href: "#",
+      label: "View Details",
+    },
+    imageUrl:
+      "https://droip.com/wp-content/uploads/2025/03/advanced-typography.webp", 
+  },
+  {
+    id: crypto.randomUUID(),
+
+    title: "CSS grids and layouts",
+    description:
+      "Build complex layouts with ease using CSS Grids. Create multi-directional structures, manage spacing, and achieve perfect alignment without limitations.",
+    link: {
+      href: "#",
+      label: "View Details",
+    },
+    imageUrl:
+      "https://droip.com/wp-content/uploads/2025/03/CSS-Grids-Layouts.webp", 
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Adaptive design",
+    description:
+      "Ensure flawless responsiveness across all devices. Design with adaptive elements that adjust seamlessly to different screen sizes and resolutions.",
+
+    imageUrl:
+      "https://droip.com/wp-content/uploads/2025/03/auto-responsive-1.webp", 
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Designed for efficiency",
+    description:
+      "Streamline your workflow with intuitive tools that simplify layout structuring. Save time while maintaining complete design accuracy and flexibility.",
+
+    imageUrl:
+      "https://droip.com/wp-content/uploads/2025/03/Designed-for-Efficiency.webp", 
+  },
+];
+
+export const CRAFT_INTERACTIONS_DATA: FeaturesListItemProps[] = [
+  {
+    id: crypto.randomUUID(),
+    title: "Advanced interaction timeline",
+    description:
+      "Design smooth, multi-step animations with a timeline-based editor for complete control.",
+    link: {
+      href: "#",
+      label: "View Details",
+    },
+    imageUrl:
+      "https://droip.com/wp-content/uploads/2025/03/Advanced-Interaction-timeline.webp",
+  },
+  {
+    id: crypto.randomUUID(),
+
+    title: "Custom timing editor",
+    description:
+      "Fine-tune every interaction to deliver flawless performance by adjusting delays, durations, easing functions, and more.",
+    link: {
+      href: "#",
+      label: "View Details",
+    },
+    imageUrl:
+      "https://droip.com/wp-content/uploads/2025/03/Custom-Timing-Editor.webp",
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Advanced triggers",
+    description:
+      "Trigger animations based on scrolling, hovering, page load, and more for a dynamic experience.",
+    imageUrl:
+      "https://droip.com/wp-content/uploads/2025/03/Advanced-Triggers.webp",
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Achieve limitless precision",
+    description:
+      "Create flawless, interactive designs visually with unmatched accuracy and finesse.",
+    imageUrl:
+      "https://droip.com/wp-content/uploads/2025/03/Achieve-Limitless-Precision.webp",
+  },
+];
 
 export const LOW_DEPS_DATA: LowDepsItemProps[] = [
   {

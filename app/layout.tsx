@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${font.variable} h-[100dvh] antialiased`}>
+      <body className={`${font.variable} h-dvh antialiased`}>
         <Header />
         {children}
         <Footer />
