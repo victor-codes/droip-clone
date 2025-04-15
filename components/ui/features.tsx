@@ -11,7 +11,7 @@ import {
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import { useState } from "react";
 
 export const Features = ({ title, list, isAlternate }: FeaturesProps) => {
   const images = list.map((item) => item.imageUrl);
@@ -24,7 +24,9 @@ export const Features = ({ title, list, isAlternate }: FeaturesProps) => {
     }
   };
 
-  // todo: slide accordion content animation is not perfect yet, image sliding not done
+  // todo: slide accordion content animation is not perfect yet
+  // todo: image sliding not done
+  // todo: link animation
   return (
     <section className="section">
       <div className="wrapper">

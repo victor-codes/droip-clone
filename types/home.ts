@@ -15,6 +15,14 @@ export type FeaturesProps = {
   list: FeaturesListItemProps[];
 };
 
+export type ScaleItemProps = {
+  id: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+  linkTo: string;
+};
+
 export type LowDepsItemProps = {
   id: string;
   type: "video" | "text";
@@ -26,8 +34,8 @@ export type LowDepsItemProps = {
 };
 
 export type DesignBuildItemProps = {
-  title: string; // H3 text content, or null if no H3 was found
-  paragraph: string; // P text content
-  imageUrl: string; // Image src URL
+  title: string;
+  paragraph: string;
+  imageUrl: string;
   column: number;
 };

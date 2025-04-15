@@ -18,7 +18,7 @@ export const Hero = () => {
 
   return (
     <section>
-      <div className="wrapper pt-[68px] pb-15">
+      <div className="wrapper pt-[68px] pb-16 md:pb-18 lap:pb-32">
         <div>
           <div className="bg-royal-150 w-fit rounded-full py-2.5 px-6">
             <p className="text-lg font-semibold tracking-[-0.76px] leading-[1.2]">
@@ -67,7 +67,7 @@ export const Hero = () => {
                   </span>
 
                   <ArrowRightIcon isHovered={isHovered} size={18} />
-                  <div className="absolute group-hover:scale-y-[1.18]  group-hover:scale-x-[0.98] transition-transform ease-out duration-300 w-full h-full rounded-18 top-1/2 transform -translate-y-1/2 left-0  bg-royal py-2 px-4" />
+                  <div className="absolute  transition-transform ease-out duration-300 w-full h-full rounded-18 top-1/2 transform -translate-y-1/2 left-0  bg-royal py-2 px-4 group-hover:scale-y-[1.18] group-hover:bg-royal-500  group-hover:scale-x-[0.98]" />
                 </Link>
               </div>
             </div>

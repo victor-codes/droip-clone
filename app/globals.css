@@ -49,8 +49,8 @@
   --color-royal-250: #bbb3fa; /* Delicate Iris use icon */
   --color-royal-300: #aaa0f9; /* Orchid Glow icon */
   --color-royal-350: #9a8df8; /* Lavender Luxe icon */
-
   --color-royal: #5641f3;
+  --color-royal-500: #4f3ef2; /* Purple Heart */
   --color-royal-600: #7867f5; /* Regal Amethyst icon */
   --color-royal-700: #551a8b;
   --color-royal-800: #9353ff;
@@ -63,7 +63,7 @@
 @layer components {
   h1,
   .section-title {
-    @apply text-[46px] lap:text-8xl text-balance font-semibold -tracking-[3px] lap:-tracking-[5px] leading-[1.1];
+    @apply text-[46px] lap:text-8xl text-black text-balance font-semibold -tracking-[3px] lap:-tracking-[5px] leading-[1.1];
   }
 
   .section-title-sm {

@@ -127,7 +127,7 @@ export const FooterOnboard = () => {
                 Try for Free
               </span>{" "}
               <ArrowRightIcon isHovered={isHovered} size={18} />
-              <div className="absolute group-hover:scale-y-[1.18]  group-hover:scale-x-[0.98] transition-transform ease-out duration-300 w-full h-full rounded-xl top-1/2 transform -translate-y-1/2 left-0  bg-royal py-2 px-4" />
+              <div className="absolute   transition-transform ease-out duration-300 w-full h-full rounded-xl top-1/2 transform -translate-y-1/2 left-0  bg-royal py-2 px-4 group-hover:scale-y-[1.18] group-hover:bg-royal-500 group-hover:scale-x-[0.98]" />
             </Link>
           </div>
           <div

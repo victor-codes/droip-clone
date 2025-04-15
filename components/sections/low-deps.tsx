@@ -46,7 +46,7 @@ const LowDepsItem = ({
           orderGrid[column]
         )}
       >
-        <div className="h-full pointer-events-auto select-none">
+        <div className="h-full pointer-events-none select-none">
           <video
             autoPlay
             loop
