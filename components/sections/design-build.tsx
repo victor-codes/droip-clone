@@ -9,7 +9,7 @@ export const DesignBuild = () => {
     <section className="section">
       <div className="wrapper">
         <div>
-          <h2 className="section-title">
+          <h2 className="section-title text-black">
             Design and <br /> build everything
           </h2>
 
@@ -57,7 +57,7 @@ const DesignBuildItem = ({
       </div>
       <div className="flex flex-col gap-6 max-w-[320px]">
         <h3
-          className="font-semibold text-2xl"
+          className="font-semibold text-black text-2xl"
           dangerouslySetInnerHTML={{ __html: title }}
         />
         <p className="text-smoky text-sm md:text-base">{paragraph}</p>

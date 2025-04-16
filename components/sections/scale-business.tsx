@@ -31,7 +31,7 @@ const SCALE_BUSS_DATA = [
     linkTo: "#",
   },
   {
-    id: ",edia-manager",
+    id: "media-manager",
     title: "Media Manager",
     description:
       "Organize and edit all media assets, including SVGs, Lottie, and icons, with the built-in image and shape editor.",

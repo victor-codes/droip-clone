@@ -7,7 +7,7 @@ export const LowDeps = () => {
     <section className="section">
       <div className="wrapper space-y-15 md:space-y-18">
         <div>
-          <h2 className="section-title-sm">
+          <h2 className="section-title-sm text-black">
             Low <br /> third-party <br /> dependencies
           </h2>
         </div>
@@ -70,7 +70,9 @@ const LowDepsItem = ({
     >
       <div className="relative w-[32px] h-[32px]">{Icon && <Icon />}</div>
       <div className="space-y-4.5">
-        <h3 className="text-2xl leading-[1.2] font-semibold">{title}</h3>
+        <h3 className="text-2xl leading-[1.2] text-black font-semibold">
+          {title}
+        </h3>
         <p className="text-lg leading-[1.4]">{description}</p>
       </div>
     </div>

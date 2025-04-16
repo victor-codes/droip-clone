@@ -43,7 +43,7 @@ export const BEYOND_ORDINARY_DATA: FeaturesListItemProps[] = [
       label: "View Details",
     },
     imageUrl:
-      "https://droip.com/wp-content/uploads/2025/03/advanced-typography.webp", 
+      "https://droip.com/wp-content/uploads/2025/03/advanced-typography.webp",
   },
   {
     id: crypto.randomUUID(),
@@ -56,7 +56,7 @@ export const BEYOND_ORDINARY_DATA: FeaturesListItemProps[] = [
       label: "View Details",
     },
     imageUrl:
-      "https://droip.com/wp-content/uploads/2025/03/CSS-Grids-Layouts.webp", 
+      "https://droip.com/wp-content/uploads/2025/03/CSS-Grids-Layouts.webp",
   },
   {
     id: crypto.randomUUID(),
@@ -65,7 +65,7 @@ export const BEYOND_ORDINARY_DATA: FeaturesListItemProps[] = [
       "Ensure flawless responsiveness across all devices. Design with adaptive elements that adjust seamlessly to different screen sizes and resolutions.",
 
     imageUrl:
-      "https://droip.com/wp-content/uploads/2025/03/auto-responsive-1.webp", 
+      "https://droip.com/wp-content/uploads/2025/03/auto-responsive-1.webp",
   },
   {
     id: crypto.randomUUID(),
@@ -74,7 +74,7 @@ export const BEYOND_ORDINARY_DATA: FeaturesListItemProps[] = [
       "Streamline your workflow with intuitive tools that simplify layout structuring. Save time while maintaining complete design accuracy and flexibility.",
 
     imageUrl:
-      "https://droip.com/wp-content/uploads/2025/03/Designed-for-Efficiency.webp", 
+      "https://droip.com/wp-content/uploads/2025/03/Designed-for-Efficiency.webp",
   },
 ];
 
@@ -84,10 +84,6 @@ export const CRAFT_INTERACTIONS_DATA: FeaturesListItemProps[] = [
     title: "Advanced interaction timeline",
     description:
       "Design smooth, multi-step animations with a timeline-based editor for complete control.",
-    link: {
-      href: "#",
-      label: "View Details",
-    },
     imageUrl:
       "https://droip.com/wp-content/uploads/2025/03/Advanced-Interaction-timeline.webp",
   },
@@ -97,10 +93,6 @@ export const CRAFT_INTERACTIONS_DATA: FeaturesListItemProps[] = [
     title: "Custom timing editor",
     description:
       "Fine-tune every interaction to deliver flawless performance by adjusting delays, durations, easing functions, and more.",
-    link: {
-      href: "#",
-      label: "View Details",
-    },
     imageUrl:
       "https://droip.com/wp-content/uploads/2025/03/Custom-Timing-Editor.webp",
   },

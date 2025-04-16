@@ -31,7 +31,7 @@ export const Features = ({ title, list, isAlternate }: FeaturesProps) => {
     <section className="section">
       <div className="wrapper">
         <div>
-          <h2 className="section-title font-medium">{title}</h2>
+          <h2 className="section-title font-medium text-black">{title}</h2>
         </div>
 
         <div className="mt-31">

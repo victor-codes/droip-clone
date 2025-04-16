@@ -32,7 +32,7 @@ export const ScaleItem = ({
         </div>
       </div>
 
-      <div className="relative -mr-[1px] rounded-[9px] md:rounded-l-none overflow-hidden lap:rounded-l-[18px]">
+      <div className="relative -mr-[1px] rounded-[9px] md:rounded-t-none overflow-hidden lap:rounded-l-[18px]">
         <Image src={imageUrl} alt={""} className="object-cover" fill />
       </div>
     </div>

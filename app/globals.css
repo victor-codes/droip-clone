@@ -63,7 +63,7 @@
 @layer components {
   h1,
   .section-title {
-    @apply text-[46px] lap:text-8xl text-black text-balance font-semibold -tracking-[3px] lap:-tracking-[5px] leading-[1.1];
+    @apply text-[46px] lap:text-8xl text-balance font-semibold -tracking-[3px] lap:-tracking-[5px] leading-[1.1];
   }
 
   .section-title-sm {
@@ -189,4 +189,26 @@ body {
   pointer-events: none;
   user-select: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.launch-after {
+  @apply after:absolute after:bg-gradient-to-r after:from-transparent after:to-black after:h-[120%] after:top-1/2 after:transform after:-translate-y-1/2 after:w-[20%] after:right-0 after:z-[5];
+}
+
+.launch-before {
+  @apply before:absolute before:bg-gradient-to-r before:from-black before:to-transparent before:h-[120%] before:top-1/2 before:transform before:-translate-y-1/2 before:w-[20%] before:-left-1 before:z-[5];
+}
+
+.launch-marquee {
+  animation: marquee var(--duration) running var(--direction) linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }

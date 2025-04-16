@@ -15,6 +15,13 @@ export type FeaturesProps = {
   list: FeaturesListItemProps[];
 };
 
+
+export type CarouselGridProps = {
+  list: string[];
+  imgClassName?: string;
+};
+
+
 export type ScaleItemProps = {
   id: string;
   title: string;
