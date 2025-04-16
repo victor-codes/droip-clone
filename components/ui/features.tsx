@@ -8,10 +8,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@radix-ui/react-accordion";
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
+import { SectionLink } from "./section-link";
 
 export const Features = ({ title, list, isAlternate }: FeaturesProps) => {
   const images = list.map((item) => item.imageUrl);
@@ -92,13 +91,9 @@ export const Features = ({ title, list, isAlternate }: FeaturesProps) => {
                         {description}
                       </p>
                       {link && (
-                        <Link
-                          href={link.href}
-                          className="flex gap-x-2 items-center  font-semibold text-royal leading-[1.75]"
-                        >
-                          {link.label}{" "}
-                          <ArrowRight size={18} strokeWidth={2.5} />
-                        </Link>
+                        <SectionLink linkTo={link.href}>
+                          {link.label}
+                        </SectionLink>
                       )}
                       <div className="relative aspect-[1.4] rounded-xl overflow-hidden lap:hidden">
                         <Image src={imageUrl} alt={""} fill />

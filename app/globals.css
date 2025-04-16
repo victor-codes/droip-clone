@@ -80,17 +80,14 @@
 }
 
 @layer utilities {
-  .group-hover-child-not-hover-opacity-100 {
-    @apply opacity-0 transition-opacity;
 
-    /* Manual CSS to handle advanced selector */
-    .group:hover & {
-      opacity: 1;
-    }
+  .anim-duration-10 {
+    animation-duration: 10s;
+  }
 
-    .group:hover &:hover {
-      opacity: 0; /* cancel if the child is hovered */
-    }
+  .text-fluid-lg {
+    @apply max-lap:!text-[46px] font-medium -tracking-[3px] lap:-tracking-[5px] leading-[1.1];
+    font-size: clamp(80px, 8vw, 96px);
   }
 }
 
@@ -115,6 +112,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-inter);
 }
+
 
 .clip-reveal {
   /* opacity: 0; */
@@ -192,11 +190,11 @@ body {
 }
 
 .launch-after {
-  @apply after:absolute after:bg-gradient-to-r after:from-transparent after:to-black after:h-[120%] after:top-1/2 after:transform after:-translate-y-1/2 after:w-[20%] after:right-0 after:z-[5];
+  @apply after:absolute after:bg-gradient-to-r after:from-transparent after:to-black  after:h-full lap:after:h-[120%] after:top-1/2 after:transform after:-translate-y-1/2  after:w-[15%] md:after:w-[20%] after:right-0 after:z-[5];
 }
 
 .launch-before {
-  @apply before:absolute before:bg-gradient-to-r before:from-black before:to-transparent before:h-[120%] before:top-1/2 before:transform before:-translate-y-1/2 before:w-[20%] before:-left-1 before:z-[5];
+  @apply before:absolute before:bg-gradient-to-r before:from-black before:to-transparent  before:h-full lap:before:h-[120%] before:top-1/2 before:transform before:-translate-y-1/2  before:w-[15%] md:before:w-[20%] before:-left-1 before:z-[5];
 }
 
 .launch-marquee {

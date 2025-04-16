@@ -4,10 +4,10 @@ import { MarqueeContainer } from "../ui/marquee-container";
 
 export const LaunchWithEase = () => {
   return (
-    <section className="section bg-black">
+    <section className="section">
       <div>
         <div className="wrapper">
-          <h2 className="section-title-sm text-white max-w-[600px] lap:max-w-[620px] lap:ml-auto">
+          <h2 className="text-[32px] tab:text-[44px] md:text-[46px] lap:text-[64px] text-balance font-semibold -tracking-[2px] lap:-tracking-[3.2px] leading-[1.1] text-white max-w-[600px] lap:max-w-[620px] lap:ml-auto">
             Jumpstart your business with beautifully crafted themes and sections
           </h2>
         </div>
@@ -23,7 +23,7 @@ export const LaunchWithEase = () => {
             </div>
           </div>
 
-          <div className="lap:absolute lap:top-24 lap:right-0 grid gap-0.5 lap:w-[65%] launch-before launch-after ">
+          <div className="relative lap:absolute lap:top-24 lap:right-0 grid gap-0.5 lap:w-[65%] launch-before launch-after pointer-events-auto select-none ">
             <MarqueeContainer>
               <div className="flex gap-1">
                 <CarouselGrid

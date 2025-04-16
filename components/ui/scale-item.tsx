@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { SectionLink } from "./section-link";
 
 // todo: has a bg color transition on enter
 export const ScaleItem = ({
@@ -23,12 +24,7 @@ export const ScaleItem = ({
             {description}
           </p>
 
-          <Link
-            href={linkTo}
-            className="flex items-center gap-x-2 font-semibold -tracking-[0.08px] text-royal leading-[1.75]"
-          >
-            View Details <ArrowRight />
-          </Link>
+          <SectionLink linkTo={linkTo}>View Details</SectionLink>
         </div>
       </div>
 

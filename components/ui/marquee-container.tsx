@@ -7,6 +7,7 @@ interface MarqueeContainerProps {
   direction?: "left" | "right";
 }
 
+// todo: change direction to use -ve | +ve values
 export const MarqueeContainer = ({
   children,
   speed = 75,

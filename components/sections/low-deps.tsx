@@ -4,7 +4,7 @@ import { LowDepsItemProps } from "@/types/home";
 
 export const LowDeps = () => {
   return (
-    <section className="section">
+    <section className="section overflow-clip">
       <div className="wrapper space-y-15 md:space-y-18">
         <div>
           <h2 className="section-title-sm text-black">
