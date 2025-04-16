@@ -19,6 +19,7 @@ export const ActiveLink = ({
   return (
     <Link
       href={href}
+      {...(isActive ? { "aria-current": "page" } : {})}
       className={cx(className, {
         "text-black font-medium": isActive,
       })}

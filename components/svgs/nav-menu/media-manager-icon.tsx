@@ -5,6 +5,7 @@ export const MediaManagerIcon = () => (
     height="24"
     viewBox="0 0 20 16"
     fill="none"
+    aria-hidden="true"
   >
     <path
       opacity="0.4"

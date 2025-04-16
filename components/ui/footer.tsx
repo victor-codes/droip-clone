@@ -53,11 +53,12 @@ export const Socials = ({ isMobile }: SocialsProps) => {
               "flex-row gap-x-3": isMobile,
             })}
           >
-            {item.links.map(({ href, icon }, idx) => {
+            {item.links.map(({ href, name, icon }, idx) => {
               const Icon = icon as React.ComponentType;
               return (
                 <li key={idx}>
                   <Link
+                    aria-label={name}
                     href={href}
                     className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white hover:shadow-md transition-all duration-300 ease"
                   >

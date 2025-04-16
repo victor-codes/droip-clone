@@ -4,22 +4,24 @@ import Image from "next/image";
 
 export const AppIntegration = () => {
   return (
-    //todo: might need to create a class for the section styling
-    <section className="section">
+    <section
+      aria-labelledby="app-heading"
+      aria-describedby="app-desc"
+      className="section"
+    >
       <div className="wrapper">
         <div>
-          <h2 className="section-title text-black">
+          <h2 id="app-heading" className="section-title text-black">
             App <br /> integration
           </h2>
 
-          <SectionGradient>
+          <SectionGradient id="app-desc">
             Connect your go-to apps effortlessly within the builder for a smooth
             and uninterrupted workflow.
           </SectionGradient>
         </div>
         <div className="grid grid-cols-4 md:grid-cols-6 gap-[1px] app-tile">
           {APP_INTEGRATION_DATA.map((Icon, index) => {
-            // Check if the icon is a string (URL) or a React component
             if (typeof Icon === "string") {
               return (
                 <AppTileItem key={index}>
@@ -45,9 +47,6 @@ export const AppIntegration = () => {
   );
 };
 
-type AppTileItemProps = {
-  children: React.ReactNode;
-};
 const AppTileItem = ({ children }: AppTileItemProps) => {
   return (
     <div
@@ -61,4 +60,8 @@ const AppTileItem = ({ children }: AppTileItemProps) => {
       </div>
     </div>
   );
+};
+
+type AppTileItemProps = {
+  children: React.ReactNode;
 };

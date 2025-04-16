@@ -8,12 +8,10 @@ export const footerData: FooterColumnProps[] = [
   {
     title: "Social",
     links: [
-      // Note: Radix doesn't have Facebook/YouTube icons. Using placeholders.
-      // Consider using SVGs or another library like react-icons for these.
-      { icon: MetaIcon, href: "#" }, // Placeholder needed
-      { icon: XIcon, href: "#" }, // Uses Radix TwitterLogoIcon
-      { icon: LinkedinIcon, href: "#" }, // Uses Radix LinkedInLogoIcon
-      { icon: YoutubeIcon, href: "#" }, // Placeholder needed
+      { name: "Meta", icon: MetaIcon, href: "#" },
+      { name: "X (formerly Twitter)", icon: XIcon, href: "#" },
+      { name: "LinkedIn", icon: LinkedinIcon, href: "#" },
+      { name: "Youtube", icon: YoutubeIcon, href: "#" },
     ],
   },
   {

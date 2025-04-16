@@ -5,6 +5,7 @@ export const ReleaseIcon = () => (
     height="24"
     viewBox="0 0 24 24"
     fill="none"
+    aria-hidden="true"
   >
     <circle cx="12" cy="12" r="9" fill="#BBB3FA" />
     <path
@@ -21,4 +22,3 @@ export const ReleaseIcon = () => (
     />
   </svg>
 );
-

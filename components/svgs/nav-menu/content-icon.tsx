@@ -5,6 +5,7 @@ export const ContentManagerIcon = () => (
     height="24"
     viewBox="0 0 20 20"
     fill="none"
+    aria-hidden="true"
   >
     <g opacity="0.4">
       <path

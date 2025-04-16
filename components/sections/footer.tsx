@@ -10,11 +10,17 @@ export const Footer = () => {
 
   const [year] = useState(new Date().getFullYear());
   return (
-    <footer className="block pt-13 pb-4 tab:pb-8 tab:pt-16 lap:py-0">
+    <footer
+      aria-label="Site Footer"
+      className="block pt-13 pb-4 tab:pb-8 tab:pt-16 lap:py-0"
+    >
       <FooterOnboard />
       <div className="wrapper text-smoky">
         <div className="py-8 tab:my-8 md:py-0 md:my-0">
-          <nav className="grid gap-y-12 gap-x-6 tab:gap-y-8  md:gap-8 grid-cols-2 md:grid-cols-5">
+          <nav
+            aria-label="Footer Navigation"
+            className="grid gap-y-12 gap-x-6 tab:gap-y-8  md:gap-8 grid-cols-2 md:grid-cols-5"
+          >
             <Socials />
             {firstIdxExclude.map((column, idx) => (
               <FooterColumn key={idx} {...column} />

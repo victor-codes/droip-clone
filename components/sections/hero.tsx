@@ -17,7 +17,7 @@ export const Hero = () => {
   };
 
   return (
-    <section>
+    <section aria-labelledby="hero-heading" aria-describedby="hero-desc">
       <div className="wrapper pt-[68px] pb-16 md:pb-18 lap:pb-32">
         <div>
           <div className="bg-royal-150 w-fit rounded-full py-2.5 px-6">
@@ -29,7 +29,7 @@ export const Hero = () => {
           <div className="flex flex-col md:flex-row lap:items-center lap:justify-between gap-y-12 mt-6 md:mt-12 mb-15 md:mb-24 ">
             <div>
               {/* text-balance */}
-              <h1 className="max-md:max-w-[400px]">
+              <h1 id="hero-heading" className="max-md:max-w-[400px]">
                 Break Limits. Build{" "}
                 <strong className="font-medium text-royal inline tracking-[-3px] lap:tracking-[-5px]">
                   Anything
@@ -40,7 +40,10 @@ export const Hero = () => {
 
             <div className="grid gap-y-1 w-full max-md:max-w-[420px] md:max-w-[320px] lap:max-w-[316px]">
               <div className="md:p-6 lap:pb-20 md:bg-royal-100 rounded-18 max-md:mb-3.5">
-                <p className="text-lg text-smoky leading-[1.4] tracking-[-0.36px]">
+                <p
+                  id="hero-desc"
+                  className="text-lg text-smoky leading-[1.4] tracking-[-0.36px]"
+                >
                   Droip is a no-code, drag-and-drop WordPress builder that
                   simplifies website creation with powerful capabilities.
                 </p>

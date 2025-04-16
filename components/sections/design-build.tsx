@@ -6,14 +6,18 @@ import Image from "next/image";
 
 export const DesignBuild = () => {
   return (
-    <section className="section">
+    <section
+      aria-labelledby="db-heading"
+      aria-describedby="db-desc"
+      className="section"
+    >
       <div className="wrapper">
         <div>
-          <h2 className="section-title text-black">
+          <h2 id="db-heading" className="section-title text-black">
             Design and <br /> build everything
           </h2>
 
-          <SectionGradient>
+          <SectionGradient id="db-desc">
             more efficiently with the{" "}
             <strong className="font-semibold">most advanced</strong> granular
             controls

@@ -14,7 +14,7 @@ export const SectionLink = ({ children, linkTo }: SectionLinkProps) => {
       className="flex items-center gap-x-2 font-semibold -tracking-[0.08px] text-royal leading-[1.75]"
     >
       <span>{children}</span>
-      <ArrowRight size={18} strokeWidth={2.5} />
+      <ArrowRight size={18} strokeWidth={2.5} aria-hidden="true" />
     </Link>
   );
 };

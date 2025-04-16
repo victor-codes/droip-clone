@@ -5,6 +5,7 @@ export const BlogIcon = () => (
     height="24"
     viewBox="0 0 24 24"
     fill="none"
+    aria-hidden="true"
   >
     <rect
       opacity="0.4"

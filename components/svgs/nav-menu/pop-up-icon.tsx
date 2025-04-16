@@ -5,6 +5,7 @@ export const PopupBuilderIcon = () => (
     height="24"
     viewBox="0 0 20 18"
     fill="none"
+    aria-hidden="true"
   >
     <path
       opacity="0.4"

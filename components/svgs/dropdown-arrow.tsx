@@ -6,6 +6,7 @@ export const DropdownArrow = () => {
       height="7"
       viewBox="0 0 12 7"
       fill="none"
+      aria-hidden="true"
     >
       <path d="M6 0L11.5 7H0.5L6 0Z" fill="white" fillOpacity="0.86"></path>
       <defs>

@@ -1,5 +1,4 @@
 "use client";
-
 import { cx } from "@/lib";
 import type { Variants } from "motion/react";
 import { motion, useAnimation } from "motion/react";
@@ -93,6 +92,7 @@ const MenuIcon = forwardRef<MenuIconHandle, MenuIconProps>(
           height={size}
           viewBox="0 0 24 24"
           fill="none"
+          aria-hidden="true"
           stroke="currentColor"
           strokeWidth="2"
           strokeLinecap="round"

@@ -9,10 +9,11 @@ import {
   AccordionTrigger,
 } from "@radix-ui/react-accordion";
 import Image from "next/image";
-import { useState } from "react";
+import { useId, useState } from "react";
 import { SectionLink } from "./section-link";
 
 export const Features = ({ title, list, isAlternate }: FeaturesProps) => {
+  const compId = useId();
   const images = list.map((item) => item.imageUrl);
   const lastItemIdx = images.length - 1;
   const [value, setValue] = useState(list[0].id); // default open
@@ -27,10 +28,15 @@ export const Features = ({ title, list, isAlternate }: FeaturesProps) => {
   // todo: image sliding not done
   // todo: link animation
   return (
-    <section className="section">
+    <section aria-labelledby={`feat-heading-${compId}`} className="section">
       <div className="wrapper">
         <div>
-          <h2 className="section-title font-medium text-black">{title}</h2>
+          <h2
+            id={`feat-heading-${compId}`}
+            className="section-title font-medium text-black"
+          >
+            {title}
+          </h2>
         </div>
 
         <div className="mt-31">

@@ -5,6 +5,7 @@ export const LayoutIcon = () => (
     height="24"
     viewBox="0 0 20 20"
     fill="none"
+    aria-hidden="true"
   >
     <rect opacity="0.4" x="11" width="9" height="11" rx="2" fill="#5641F3" />
     <rect
@@ -38,4 +39,3 @@ export const LayoutIcon = () => (
     />
   </svg>
 );
-

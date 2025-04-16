@@ -27,6 +27,7 @@ export const RocketIcon = () => {
       height="50"
       viewBox="0 0 64 65"
       fill="none"
+      aria-hidden="true"
       variants={rocketVariants}
       initial="initial"
       animate="animate"

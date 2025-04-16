@@ -25,7 +25,7 @@ export const Header = () => {
             {/* nav */}
             <div className="hidden lg:block">
               <NavigationMenu>
-                <NavigationMenuList>
+                <NavigationMenuList aria-label="Main Navigation">
                   <ul className="flex items-center gap-3.5">
                     {NAV_MENU_COPY.menus.map((item, idx) => (
                       <Fragment key={idx}>

@@ -35,6 +35,7 @@ export const MobileHeader = ({ children }: MobileHeaderProps) => {
       <Accordion aria-hidden={!isOpen} type="single" collapsible>
         {/* todo: work `wrapper class usage here`` */}
         <nav
+          aria-label="Main Navigation"
           className={cx(
             "fixed bg-white/86 backdrop-blur-lg h-0 w-[100dvw] overflow-scroll transition-[height] duration-500 inset-0 top-[62px] z-20 lg:hidden",
             {

@@ -5,6 +5,7 @@ export const FigmaToDroipIcon = (props: React.SVGProps<SVGSVGElement>) => (
     height="24"
     viewBox="0 0 14 20"
     fill="none"
+    aria-hidden="true"
     {...props}
   >
     <path

@@ -6,6 +6,7 @@ export const EclipseSvg = () => {
       height="64"
       viewBox="0 0 64 64"
       fill="none"
+      aria-hidden="true"
       className="animate-spin anim-duration-10"
     >
       <path

@@ -3,10 +3,13 @@ import { ScaleItem } from "../ui/scale-item";
 
 export const ScaleBusiness = () => {
   return (
-    <section className="section bg-black">
+    <section aria-labelledby="sb-heading" className="section bg-black">
       <div className="wrapper">
         <div className="max-w-[600px]">
-          <h2 className="section-title mb-12.5 md:mb-16 lap:mb-24 text-white">
+          <h2
+            id="sb-heading"
+            className="section-title mb-12.5 md:mb-16 lap:mb-24 text-white"
+          >
             Scale your business with
           </h2>
         </div>

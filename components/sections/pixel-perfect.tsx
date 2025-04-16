@@ -38,14 +38,19 @@ export const PixelPerfect = () => {
 
   return (
     <motion.div style={{ backgroundColor: bgColor }}>
-      <section ref={ref} className="section">
+      <section
+        aria-labelledby="pxl-heading"
+        aria-describedby="pxl-desc"
+        ref={ref}
+        className="section"
+      >
         <div className="h-auto static lap:h-[300dvh]">
           <div className="sticky top-25 wrapper flex flex-col !items-start gap-y-8 lap:gap-x-10 lap:flex-row lap:justify-between lap:max-h-[830px] lap:overflow-hidden">
             <motion.div
               className="static max-w-[440px] tab:max-w-[532px] lap:max-w-[600px] "
               style={{ opacity, y }}
             >
-              <h2 className="text-fluid-lg text-black">
+              <h2 id="pxl-heading" className="text-fluid-lg text-black">
                 Create <br /> pixel-perfect accuracy in the atomic level
               </h2>
             </motion.div>
@@ -109,7 +114,10 @@ export const PixelPerfect = () => {
               style={{ opacity, y }}
             >
               <EclipseSvg />
-              <p className="text-lg leading-[1.3] -tracking-[0.3px] md:text-2xl lap:leading-[1.2] lap:-tracking-[0.48px] text-black">
+              <p
+                id="pxl-desc"
+                className="text-lg leading-[1.3] -tracking-[0.3px] md:text-2xl lap:leading-[1.2] lap:-tracking-[0.48px] text-black"
+              >
                 Create your website from the ground up with complete control
                 over every element, down to the smallest detail.
               </p>

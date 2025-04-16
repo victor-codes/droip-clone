@@ -5,6 +5,7 @@ export const TypographyIcon = () => (
     height="24"
     viewBox="0 0 20 13"
     fill="none"
+    aria-hidden="true"
   >
     <path
       opacity="0.4"

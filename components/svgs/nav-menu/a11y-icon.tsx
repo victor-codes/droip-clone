@@ -5,6 +5,7 @@ export const AccessibilityIcon = () => (
     height="24"
     viewBox="0 0 16 19"
     fill="none"
+    aria-hidden="true"
   >
     <path
       opacity="0.8"

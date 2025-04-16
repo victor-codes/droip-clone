@@ -17,7 +17,7 @@ export const Performance = () => {
   }, [setTarget, setLerped]);
 
   return (
-    <section>
+    <section aria-labelledby="perf-heading">
       <div
         ref={ref}
         className="perf-parent relative bg-black overflow-clip section mb-15"
@@ -25,7 +25,7 @@ export const Performance = () => {
       >
         <div className="wrapper text-white">
           <div className="relative mb-16 md:mb-12 lap:mb-32 z-[1]">
-            <h2 className="section-title-sm text-center">
+            <h2 id="perf-heading" className="section-title-sm text-center">
               Performance that <br /> sets you apart
             </h2>
           </div>

@@ -1,6 +1,5 @@
 interface FooterLinkItem {
-  // type: "text" | "icon";
-  name?: string;
+  name: string;
   href: string;
   icon?: React.ComponentType;
 }
@@ -10,7 +9,6 @@ export interface FooterColumnProps {
   links: FooterLinkItem[];
 }
 
-
 export type SocialsProps = {
   isMobile?: boolean;
-};  
+};

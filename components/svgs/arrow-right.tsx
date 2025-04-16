@@ -70,6 +70,7 @@ const ArrowRightIcon = forwardRef<ArrowRightIconHandle, ArrowRightIconProps>(
           height={size}
           viewBox="0 0 24 24"
           fill="none"
+          aria-hidden="true"
           stroke="currentColor"
           strokeWidth="2"
           strokeLinecap="round"

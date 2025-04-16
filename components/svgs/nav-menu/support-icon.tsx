@@ -6,6 +6,7 @@ export const SupportIcon = (props: React.SVGProps<SVGSVGElement>) => (
     height="24"
     viewBox="0 0 24 24"
     fill="none"
+    aria-hidden="true"
   >
     <rect x="2" y="5" width="20" height="14" rx="2" fill="#BBB3FA" />
     <path

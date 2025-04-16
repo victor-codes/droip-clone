@@ -7,6 +7,7 @@ export const AppTileIcon1 = () => (
     height="100%"
     viewBox="0 0 48 49"
     fill="none"
+    aria-hidden="true"
   >
     <g clipPath="url(#clip0_946_18690)">
       <rect y="0.5" width="48" height="48" fill="#1F8DED" />
@@ -31,6 +32,7 @@ export const AppTileIcon2 = () => (
     height="100%"
     viewBox="0 0 48 49"
     fill="none"
+    aria-hidden="true"
   >
     <g clipPath="url(#clip0_946_18698)">
       <rect y="0.5" width="48" height="48" fill="#1292EE" />
@@ -55,6 +57,7 @@ export const AppTileIcon3 = () => (
     height="100%"
     viewBox="0 0 48 49"
     fill="none"
+    aria-hidden="true"
   >
     <g clipPath="url(#clip0_946_18707)">
       <rect y="0.5" width="48" height="48" fill="#3C387F" />
@@ -85,6 +88,7 @@ export const AppTileIcon4 = () => (
     height="100%"
     viewBox="0 0 48 49"
     fill="none"
+    aria-hidden="true"
   >
     <g clipPath="url(#clip0_946_18713)">
       <rect y="0.5" width="48" height="48" fill="#F9E050" />
@@ -109,6 +113,7 @@ export const AppTileIcon5 = () => (
     height="100%"
     viewBox="0 0 48 49"
     fill="none"
+    aria-hidden="true"
   >
     <g clipPath="url(#clip0_946_18717)">
       <rect y="0.5" width="48" height="48" fill="#67B0F9" />
@@ -133,6 +138,7 @@ export const AppTileIcon6 = () => (
     height="100%"
     viewBox="0 0 48 49"
     fill="none"
+    aria-hidden="true"
   >
     <g clipPath="url(#clip0_946_18721)">
       <rect y="0.5" width="48" height="48" fill="#326BE1" />
@@ -161,6 +167,7 @@ export const AppTileIcon7 = () => (
     height="100%"
     viewBox="0 0 48 49"
     fill="none"
+    aria-hidden="true"
   >
     <g clipPath="url(#clip0_1266_25445)">
       <rect y="0.5" width="48" height="48" fill="white" />
@@ -193,6 +200,7 @@ export const AppTileIcon8 = () => (
     height="100%"
     viewBox="0 0 48 49"
     fill="none"
+    aria-hidden="true"
   >
     <g clipPath="url(#clip0_1266_25456)">
       <rect y="0.5" width="48" height="48" fill="#03363D" />
@@ -217,6 +225,7 @@ export const AppTileIcon9 = () => (
     height="100%"
     viewBox="0 0 48 49"
     fill="none"
+    aria-hidden="true"
   >
     <g clipPath="url(#clip0_1266_25460)">
       <rect y="0.5" width="48" height="48" fill="#EC8162" />
@@ -249,6 +258,7 @@ export const AppTileIcon10 = () => (
     height="100%"
     viewBox="0 0 48 49"
     fill="none"
+    aria-hidden="true"
   >
     <g clipPath="url(#clip0_1266_25470)">
       <rect y="0.5" width="48" height="48" fill="#E843F0" />
@@ -278,6 +288,7 @@ export const AppTileIcon11 = () => (
     height="100%"
     viewBox="0 0 48 49"
     fill="none"
+    aria-hidden="true"
   >
     <g clipPath="url(#clip0_1266_25474)">
       <rect y="0.5" width="48" height="48" fill="white" />
@@ -306,6 +317,7 @@ export const AppTileIcon12 = () => (
     height="100%"
     viewBox="0 0 48 49"
     fill="none"
+    aria-hidden="true"
   >
     <g clipPath="url(#clip0_1266_25484)">
       <rect y="0.5" width="48" height="48" fill="white" />
@@ -334,6 +346,7 @@ export const AppTileIcon13 = () => (
     height="100%"
     viewBox="0 0 48 49"
     fill="none"
+    aria-hidden="true"
   >
     <g clipPath="url(#clip0_1266_25491)">
       <rect y="0.5" width="48" height="48" fill="white" />
@@ -374,6 +387,7 @@ export const AppTileIcon14 = () => (
     height="100%"
     viewBox="0 0 48 49"
     fill="none"
+    aria-hidden="true"
   >
     <g clipPath="url(#clip0_1266_25541)">
       <rect y="0.5" width="48" height="48" fill="#1A63E8" />
@@ -398,6 +412,7 @@ export const AppTileIcon15 = () => (
     height="100%"
     viewBox="0 0 48 49"
     fill="none"
+    aria-hidden="true"
   >
     <g clipPath="url(#clip0_1266_25545)">
       <rect y="0.5" width="48" height="48" fill="white" />
@@ -434,6 +449,7 @@ export const AppTileIcon16 = () => (
     height="100%"
     viewBox="0 0 48 49"
     fill="none"
+    aria-hidden="true"
   >
     <g clipPath="url(#clip0_1266_25553)">
       <rect y="0.5" width="48" height="48" fill="white" />
@@ -465,6 +481,7 @@ export const AppTileIcon17 = () => (
     height="100%"
     viewBox="0 0 48 49"
     fill="none"
+    aria-hidden="true"
   >
     <g clipPath="url(#clip0_1266_25560)">
       <rect y="0.5" width="48" height="48" fill="white" />
@@ -491,6 +508,7 @@ export const AppTileIcon18 = () => (
     height="100%"
     viewBox="0 0 48 49"
     fill="none"
+    aria-hidden="true"
   >
     <g clipPath="url(#clip0_1266_25565)">
       <rect y="0.5" width="48" height="48" fill="white" />
@@ -515,6 +533,7 @@ export const AppTileIcon19 = () => (
     height="100%"
     viewBox="0 0 48 49"
     fill="none"
+    aria-hidden="true"
   >
     <g clipPath="url(#clip0_1266_25569)">
       <rect y="0.5" width="48" height="48" fill="black" />
@@ -539,6 +558,7 @@ export const AppTileIcon20 = () => (
     height="100%"
     viewBox="0 0 48 49"
     fill="none"
+    aria-hidden="true"
   >
     <g clipPath="url(#clip0_1266_25573)">
       <rect y="0.5" width="48" height="48" fill="white" />
@@ -784,6 +804,7 @@ export const AppTileIcon21 = () => (
     height="100%"
     viewBox="0 0 48 49"
     fill="none"
+    aria-hidden="true"
   >
     <g clipPath="url(#clip0_1266_25611)">
       <rect y="0.5" width="48" height="48" fill="#E42527"></rect>
@@ -811,6 +832,7 @@ export const AppTileIcon22 = () => (
     height="100%"
     viewBox="0 0 48 49"
     fill="none"
+    aria-hidden="true"
   >
     <g clipPath="url(#clip0_1266_25617)">
       <rect y="0.5" width="48" height="48" fill="#FF5100" />

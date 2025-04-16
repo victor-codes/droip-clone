@@ -4,10 +4,10 @@ import { LowDepsItemProps } from "@/types/home";
 
 export const LowDeps = () => {
   return (
-    <section className="section overflow-clip">
+    <section aria-labelledby="ld-heading" className="section overflow-clip">
       <div className="wrapper space-y-15 md:space-y-18">
         <div>
-          <h2 className="section-title-sm text-black">
+          <h2 id="ld-heading" className="section-title-sm text-black">
             Low <br /> third-party <br /> dependencies
           </h2>
         </div>

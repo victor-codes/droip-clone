@@ -4,10 +4,17 @@ import { MarqueeContainer } from "../ui/marquee-container";
 
 export const LaunchWithEase = () => {
   return (
-    <section className="section">
+    <section
+      aria-labelledby="lwe-heading"
+      aria-describedby="lwe-desc"
+      className="section"
+    >
       <div>
         <div className="wrapper">
-          <h2 className="text-[32px] tab:text-[44px] md:text-[46px] lap:text-[64px] text-balance font-semibold -tracking-[2px] lap:-tracking-[3.2px] leading-[1.1] text-white max-w-[600px] lap:max-w-[620px] lap:ml-auto">
+          <h2
+            id="lwe-heading"
+            className="text-[32px] tab:text-[44px] md:text-[46px] lap:text-[64px] text-balance font-semibold -tracking-[2px] lap:-tracking-[3.2px] leading-[1.1] text-white max-w-[600px] lap:max-w-[620px] lap:ml-auto"
+          >
             Jumpstart your business with beautifully crafted themes and sections
           </h2>
         </div>
@@ -16,7 +23,10 @@ export const LaunchWithEase = () => {
           <div className="wrapper">
             <div className="relative grid max-lap:max-w-[600px] gap-y-4.5 lap:gap-y-8 max-[lap]:mb-10 lap:min-w-[320px] lap:w-[28%] mb-10 lap:mb-0 z-10">
               <RocketIcon />
-              <p className="text-lg tab:text-xl md:text-2xl -tracking-[0.3px] leading-[1.2] md:-tracking-[0.48px] text-white lap:max-w-[620px]">
+              <p
+                id="lwe-desc"
+                className="text-lg tab:text-xl md:text-2xl -tracking-[0.3px] leading-[1.2] md:-tracking-[0.48px] text-white lap:max-w-[620px]"
+              >
                 Launch with ease using stunning, ready-to-use themes & sections
                 designed for every need.
               </p>
