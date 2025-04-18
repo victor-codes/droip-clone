@@ -136,7 +136,7 @@ export const PixelPerfect = () => {
               className="static max-w-[440px] tab:max-w-[532px] lap:max-w-[600px] "
               style={{ opacity: contentOpacity, y: contentY }}
             >
-              <AnimatedLines lines={lines} lineClassName="!bg-[#f5f5f7]">
+              <AnimatedLines lines={lines}>
                 <h2 id="pxl-heading" className="text-fluid-lg text-black">
                   Create <br /> pixel-perfect accuracy in the atomic level
                 </h2>
@@ -222,7 +222,7 @@ export const PixelPerfect = () => {
             >
               <EclipseSvg />
 
-              <AnimatedLines lines={textLines} lineClassName="!bg-[#f5f5f7]">
+              <AnimatedLines lines={textLines}>
                 <p
                   id="pxl-desc"
                   className="text-lg leading-[1.3] -tracking-[0.3px] md:text-2xl lap:leading-[1.2] lap:-tracking-[0.48px] text-black"

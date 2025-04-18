@@ -61,7 +61,7 @@ export const AnimatedLines = ({
             key={index}
             variants={lineVariants}
             className={cx(
-              "w-full h-full bg-white opacity-68",
+              "w-full h-full bg-background opacity-68",
               style,
               lineClassName
             )}
