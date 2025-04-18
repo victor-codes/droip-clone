@@ -62,17 +62,6 @@
   overflow: hidden;
 }
 
-.section-title::after {
-  content: "";
-  @apply absolute top-0 left-0 h-[250%] w-full  ease-out transition-transform duration-300 opacity-68 z-10;
-  background-image: linear-gradient(
-    to bottom right,
-    rgba(0, 0, 0, 0) 3%,
-    var(--background) 4%
-  );
-  transform-origin: left center;
-}
-
 .no-scrollbar * {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */

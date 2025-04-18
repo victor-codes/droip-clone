@@ -1,6 +1,9 @@
 "use client";
 import { createRef, useRef } from "react";
+import { AnimatedLines } from "../ui/animated-lines";
 import { ScaleItem } from "../ui/scale-item";
+
+const lines = ["block", "block"];
 
 export const ScaleBusiness = () => {
   const scaleRefs = useRef(
@@ -10,13 +13,12 @@ export const ScaleBusiness = () => {
   return (
     <section aria-labelledby="sb-heading" className="section bg-black">
       <div className="wrapper">
-        <div className="max-w-[600px]">
-          <h2
-            id="sb-heading"
-            className="section-title mb-12.5 md:mb-16 lap:mb-24 text-white"
-          >
-            Scale your business with
-          </h2>
+        <div className="max-w-[600px] mb-12.5 md:mb-16 lap:mb-24">
+          <AnimatedLines lines={lines} lineClassName="!bg-black">
+            <h2 id="sb-heading" className="section-title  text-white">
+              Scale your business with
+            </h2>
+          </AnimatedLines>
         </div>
 
         <div className="grid gap-y-10 lap:gap-y-30">

@@ -2,6 +2,9 @@
 import { useLerpMousePosition } from "@/hooks/use-lerp-mos-pos";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import { AnimatedLines } from "../ui/animated-lines";
+
+const lines = ["block", "block"];
 
 export const Performance = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -25,9 +28,11 @@ export const Performance = () => {
       >
         <div className="wrapper text-white">
           <div className="relative mb-16 md:mb-12 lap:mb-32 z-[1]">
-            <h2 id="perf-heading" className="section-title-sm text-center">
-              Performance that <br /> sets you apart
-            </h2>
+            <AnimatedLines lines={lines} lineClassName="!bg-black">
+              <h2 id="perf-heading" className="section-title-sm text-center">
+                Performance that <br /> sets you apart
+              </h2>
+            </AnimatedLines>
           </div>
           <div className="grid grid-cols-1 lap:grid-cols-2 gap-y-4 gap-x-4.5">
             <PerformanceItem

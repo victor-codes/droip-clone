@@ -10,7 +10,10 @@ import {
 } from "@radix-ui/react-accordion";
 import Image from "next/image";
 import { useId, useState } from "react";
+import { AnimatedLines } from "./animated-lines";
 import { SectionLink } from "./section-link";
+
+const lines = ["block", "block", "lap:hidden"];
 
 export const Features = ({ title, list, isAlternate }: FeaturesProps) => {
   const compId = useId();
@@ -33,14 +36,14 @@ export const Features = ({ title, list, isAlternate }: FeaturesProps) => {
   return (
     <section aria-labelledby={`feat-heading-${compId}`} className="section">
       <div className="wrapper">
-        <div>
+        <AnimatedLines lines={lines}>
           <h2
             id={`feat-heading-${compId}`}
             className="section-title font-medium text-black"
           >
             {title}
           </h2>
-        </div>
+        </AnimatedLines>
 
         <div className="mt-31">
           <div
