@@ -198,9 +198,9 @@ export const PixelPerfect = () => {
                   <Frame />
                 </motion.div>
 
-                <div className="absolute top-[360px]">
+                <div className="absolute top-[360px] transform  left-1/2 -translate-x-1/2">
                   <motion.h3
-                    className="font-semibold text-[172px] -tracking-[8.6px] transform -traxlate-x-1/2"
+                    className="font-semibold text-[172px] -tracking-[8.6px]"
                     style={{
                       y: textY,
                       color: textColor,
