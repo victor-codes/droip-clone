@@ -3,7 +3,7 @@ import { Header } from "@/components/sections/header";
 import { siteConfig } from "@/utils/meta";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "@/styles/globals.css";
 
 const font = Inter({
   variable: "--font-inter",

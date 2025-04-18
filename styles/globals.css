@@ -1,0 +1,220 @@
+@import "tailwindcss";
+@import "./custom.css";
+
+root {
+  --background: #f5f5f7;
+  --foreground: #171717;
+}
+
+@theme {
+  --breakpoint-tab: 35.9375rem;
+  --breakpoint-lap: 62rem;
+
+  --animate-slideDown: slideDown 250ms var(--ease-smooth-in-out);
+  --animate-slideUp: slideUp 250ms var(--ease-smooth-in-out);
+
+  --animate-slideArdDown: slideArdDown 500ms ease-in-out;
+  --animate-slideArdUp: slideArdUp 500ms ease-in-out;
+
+  --animate-enter-from-right: enterFromRight 250ms var(--ease-smooth-in-out);
+  --animate-enter-from-left: enterFromLeft 250ms var(--ease-smooth-in-out);
+  --animate-exit-to-right: exitToRight 20ms var(--ease-smooth-in-out);
+  --animate-exit-to-left: exitToLeft 200ms var(--ease-smooth-in-out);
+  --animate-fade-out: fadeOut 200ms var(--ease-smooth-in-out);
+  --animate-fade-in: fadeIn 500ms linear;
+
+  /* easing curves */
+  --ease-smooth-in-out: cubic-bezier(0.294818, 0.699187, 0.488796, 0.796748);
+}
+
+@theme inline {
+  --font-sans: var(--font-inter);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-smoky: #605c7a;
+
+  --color-royal-50: #f5f5f7;
+  --color-royal-100: #ebe8fe;
+  --color-royal-150: #ddd9fd;
+  --color-royal-200: #c9c2fb;
+  --color-royal-250: #bbb3fa;
+  --color-royal-300: #aaa0f9;
+  --color-royal-350: #9a8df8;
+  --color-royal: #5641f3;
+  --color-royal-500: #4f3ef2;
+  --color-royal-600: #7867f5;
+  --color-royal-700: #551a8b;
+  --color-royal-800: #9353ff;
+
+  --radius-18: 1.125rem;
+
+  --ease-initial: ease;
+}
+
+@layer components {
+  h1,
+  .section-title {
+    @apply text-[46px] lap:text-8xl text-balance font-semibold -tracking-[3px] lap:-tracking-[5px] leading-[1.1];
+  }
+
+  .section-title-sm {
+    @apply text-[46px] lap:text-[64px] text-balance font-semibold -tracking-[2px] lap:-tracking-[3.2px] leading-[1.1];
+  }
+
+  .section {
+    @apply py-16 md:py-18 lap:py-32 overflow-clip;
+  }
+
+  .wrapper {
+    @apply max-md:!max-w-[640px] max-lap:max-w-[820px] px-4 tab:px-5  lap:max-w-[1360px] mx-auto;
+  }
+
+  .link--hidden {
+    @apply inline-block overflow-x-hidden overflow-y-auto relative align-top;
+  }
+
+  .link--hidden svg {
+    @apply transition-transform duration-300 transform;
+    transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .link--hidden:hover svg {
+    @apply translate-x-1;
+  }
+
+  .link--hidden span::after {
+    content: "";
+    @apply absolute bottom-0 left-0 h-px w-full bg-current ease-out transition-transform duration-300;
+    transform: scaleX(0);
+    transform-origin: left center;
+  }
+
+  .link--hidden:hover span::after {
+    transform: scaleX(1);
+  }
+}
+
+@layer utilities {
+  .anim-duration-10 {
+    animation-duration: 10s;
+  }
+
+  .text-fluid-lg {
+    @apply max-lap:!text-[46px] font-medium -tracking-[3px] lap:-tracking-[5px] leading-[1.1];
+    font-size: clamp(80px, 8vw, 96px);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #f5f5f7;
+    --foreground: #171717;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter);
+}
+
+@layer utilities {
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes slideDown {
+    from {
+      height: 0px;
+    }
+    to {
+      height: var(--radix-navigation-menu-viewport-height);
+    }
+  }
+  @keyframes slideUp {
+    from {
+      height: var(--radix-navigation-menu-viewport-height);
+    }
+    to {
+      height: 0px;
+    }
+  }
+  @keyframes slideArdDown {
+    from {
+      height: 0px;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes slideArdUp {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0px;
+    }
+  }
+  @keyframes enterFromRight {
+    0% {
+      opacity: 0;
+      transform: translateX(200px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes enterFromLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-200px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes exitToRight {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(200px);
+    }
+  }
+  @keyframes exitToLeft {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-200px);
+    }
+  }
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

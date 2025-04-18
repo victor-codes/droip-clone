@@ -1,10 +1,20 @@
+"use client";
 import { DesignBuildItemProps } from "@/types/home";
 import { SectionGradient } from "../ui/section-gradient";
 import { DESIGN_BUILD_DATA } from "@/contents/home";
 import { cx } from "@/lib";
 import Image from "next/image";
+import { useInView } from "motion/react";
+import React, { useRef } from "react";
 
 export const DesignBuild = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  const isInView = useInView(sectionRef, {
+    once: true,
+    amount: 0.2,
+  });
+
   return (
     <section
       aria-labelledby="db-heading"
@@ -12,16 +22,25 @@ export const DesignBuild = () => {
       className="section"
     >
       <div className="wrapper">
-        <div>
+        <div ref={sectionRef}>
           <h2 id="db-heading" className="section-title text-black">
             Design and <br /> build everything
           </h2>
 
-          <SectionGradient id="db-desc">
-            more efficiently with the{" "}
-            <strong className="font-semibold">most advanced</strong> granular
-            controls
-          </SectionGradient>
+          <div
+            data-anim-ctrl={isInView}
+            style={
+              {
+                "--ball-offset": "-32px",
+              } as React.CSSProperties
+            }
+          >
+            <SectionGradient id="db-desc">
+              more efficiently with the{" "}
+              <strong className="font-semibold">most advanced</strong> granular
+              controls
+            </SectionGradient>
+          </div>
         </div>
 
         <div className="relative grid gap-[1px] md:grid-cols-2 lap:grid-cols-4">

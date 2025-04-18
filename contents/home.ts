@@ -26,6 +26,7 @@ import { LDCostEffIcon } from "@/components/svgs/low-deps/cost-eff-icon";
 import { LDGridIcon } from "@/components/svgs/low-deps/grid-icon";
 import { LDSecureIcon } from "@/components/svgs/low-deps/secure-icon";
 import { LDWorkflowIcon } from "@/components/svgs/low-deps/workflow-icon";
+import { getUUID } from "@/lib";
 import {
   DesignBuildItemProps,
   FeaturesListItemProps,
@@ -34,7 +35,7 @@ import {
 
 export const BEYOND_ORDINARY_DATA: FeaturesListItemProps[] = [
   {
-    id: crypto.randomUUID(),
+    id: getUUID(),
     title: "Advanced typography",
     description:
       "Take full control over your text with precision typography tools. Adjust fonts, spacing, and styles to add more character to your design.",
@@ -46,7 +47,7 @@ export const BEYOND_ORDINARY_DATA: FeaturesListItemProps[] = [
       "https://droip.com/wp-content/uploads/2025/03/advanced-typography.webp",
   },
   {
-    id: crypto.randomUUID(),
+    id: getUUID(),
 
     title: "CSS grids and layouts",
     description:
@@ -59,7 +60,7 @@ export const BEYOND_ORDINARY_DATA: FeaturesListItemProps[] = [
       "https://droip.com/wp-content/uploads/2025/03/CSS-Grids-Layouts.webp",
   },
   {
-    id: crypto.randomUUID(),
+    id: getUUID(),
     title: "Adaptive design",
     description:
       "Ensure flawless responsiveness across all devices. Design with adaptive elements that adjust seamlessly to different screen sizes and resolutions.",
@@ -68,7 +69,7 @@ export const BEYOND_ORDINARY_DATA: FeaturesListItemProps[] = [
       "https://droip.com/wp-content/uploads/2025/03/auto-responsive-1.webp",
   },
   {
-    id: crypto.randomUUID(),
+    id: getUUID(),
     title: "Designed for efficiency",
     description:
       "Streamline your workflow with intuitive tools that simplify layout structuring. Save time while maintaining complete design accuracy and flexibility.",
@@ -80,7 +81,7 @@ export const BEYOND_ORDINARY_DATA: FeaturesListItemProps[] = [
 
 export const CRAFT_INTERACTIONS_DATA: FeaturesListItemProps[] = [
   {
-    id: crypto.randomUUID(),
+    id: getUUID(),
     title: "Advanced interaction timeline",
     description:
       "Design smooth, multi-step animations with a timeline-based editor for complete control.",
@@ -88,7 +89,7 @@ export const CRAFT_INTERACTIONS_DATA: FeaturesListItemProps[] = [
       "https://droip.com/wp-content/uploads/2025/03/Advanced-Interaction-timeline.webp",
   },
   {
-    id: crypto.randomUUID(),
+    id: getUUID(),
 
     title: "Custom timing editor",
     description:
@@ -97,7 +98,7 @@ export const CRAFT_INTERACTIONS_DATA: FeaturesListItemProps[] = [
       "https://droip.com/wp-content/uploads/2025/03/Custom-Timing-Editor.webp",
   },
   {
-    id: crypto.randomUUID(),
+    id: getUUID(),
     title: "Advanced triggers",
     description:
       "Trigger animations based on scrolling, hovering, page load, and more for a dynamic experience.",
@@ -105,7 +106,7 @@ export const CRAFT_INTERACTIONS_DATA: FeaturesListItemProps[] = [
       "https://droip.com/wp-content/uploads/2025/03/Advanced-Triggers.webp",
   },
   {
-    id: crypto.randomUUID(),
+    id: getUUID(),
     title: "Achieve limitless precision",
     description:
       "Create flawless, interactive designs visually with unmatched accuracy and finesse.",

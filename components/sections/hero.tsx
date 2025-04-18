@@ -77,7 +77,7 @@ export const Hero = () => {
           </div>
         </div>
 
-        <div className="relative aspect-[1.72] bg-royal-150 border-royal-150 border-8 rounded-[10px]">
+        <div className="home-image-anim relative aspect-[1.72] bg-royal-150 border-royal-150 border-8 rounded-[10px]">
           <Image
             src="https://droip.com/wp-content/uploads/2025/04/hero-home1.webp"
             fill

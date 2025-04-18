@@ -1,16 +1,45 @@
-import React, { ReactNode } from "react";
+"use client";
+
+// export const SectionHeader = ({ children, title }: SectionHeaderProps) => {
+//   const id = useId();
+//   const sectionRef = useRef<HTMLHeadingElement>(null);
+
+//   const isInView = useInView(sectionRef, {
+//     once: true,
+//   });
+
+//   return (
+//     <div ref={sectionRef}>
+//       <h2 id="db-heading" className="section-title text-black">
+//         {title}
+//       </h2>
+
+//       <div
+//         data-anim-ctrl={isInView}
+//         style={
+//           {
+//             "--ball-offset": "-32px",
+//           } as React.CSSProperties
+//         }
+//       >
+//         <SectionGradient id="db-desc">{children}</SectionGradient>
+//       </div>
+//     </div>
+//   );
+// };
 
 export const SectionGradient = ({
   children,
+  sectionRef,
   ...props
 }: SectionGradientProps) => {
   return (
-    <div className="grid grid-cols-[1fr_minmax(232px,426px)] gap-x-6 mt-6 mb-16 lap:mb-24">
+    <div className="grid grid-cols-[1fr_minmax(232px,426px)] gap-x-6 mt-6 mb-16 lap:mb-24 overflow-hidden">
       <div className="relative flex justify-end">
-        <div className="absolute h-[1px] w-full section-grad-line" />
+        <div className="section-grad-line" />
         <div className="relative left-[15px]">
-          <div className="min-h-12 h-[calc(100%_-_17px)] w-[1px] bg-royal " />
-          <div className="relative -left-[7.5px]  bg-royal w-[15px] h-[15px] rounded-2xl " />
+          <div className="sec-grad-hl" />
+          <div className="sec-grad-ball" />
         </div>
       </div>
       <div>
@@ -23,5 +52,11 @@ export const SectionGradient = ({
 };
 
 type SectionGradientProps = React.ComponentPropsWithoutRef<"p"> & {
-  children: ReactNode;
+  children: React.ReactNode;
+  sectionRef?: React.Ref<HTMLElement>;
 };
+
+// type SectionHeaderProps = {
+//   children: React.ReactNode;
+//   title: React.ReactNode;
+// };

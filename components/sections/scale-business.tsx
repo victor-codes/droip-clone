@@ -1,7 +1,12 @@
-import React from "react";
+"use client";
+import { createRef, useRef } from "react";
 import { ScaleItem } from "../ui/scale-item";
 
 export const ScaleBusiness = () => {
+  const scaleRefs = useRef(
+    SCALE_BUSS_DATA.map(() => createRef<HTMLDivElement>())
+  );
+
   return (
     <section aria-labelledby="sb-heading" className="section bg-black">
       <div className="wrapper">
@@ -15,8 +20,13 @@ export const ScaleBusiness = () => {
         </div>
 
         <div className="grid gap-y-10 lap:gap-y-30">
-          {SCALE_BUSS_DATA.map(({ id, ...item }) => (
-            <ScaleItem key={id} {...item} />
+          {SCALE_BUSS_DATA.map(({ id, ...item }, idx) => (
+            <ScaleItem
+              key={id}
+              {...item}
+              prevRef={scaleRefs.current[idx - 1] ?? null}
+              sectionRef={scaleRefs.current[idx]}
+            />
           ))}
         </div>
       </div>

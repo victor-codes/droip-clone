@@ -11,9 +11,9 @@ export const SectionLink = ({ children, linkTo }: SectionLinkProps) => {
   return (
     <Link
       href={linkTo}
-      className="flex items-center gap-x-2 font-semibold -tracking-[0.08px] text-royal leading-[1.75]"
+      className="flex items-center gap-x-2 font-semibold -tracking-[0.08px] text-royal leading-[1.75] link--hidden"
     >
-      <span>{children}</span>
+      <span className="relative block">{children}</span>
       <ArrowRight size={18} strokeWidth={2.5} aria-hidden="true" />
     </Link>
   );

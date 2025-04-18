@@ -15,12 +15,10 @@ export type FeaturesProps = {
   list: FeaturesListItemProps[];
 };
 
-
 export type CarouselGridProps = {
   list: string[];
   imgClassName?: string;
 };
-
 
 export type ScaleItemProps = {
   id: string;
@@ -28,6 +26,8 @@ export type ScaleItemProps = {
   description: string;
   imageUrl: string;
   linkTo: string;
+  prevRef?: any;
+  sectionRef?: any;
 };
 
 export type LowDepsItemProps = {

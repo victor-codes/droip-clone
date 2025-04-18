@@ -1,8 +1,19 @@
+"use client";
 import { APP_INTEGRATION_DATA } from "@/contents/home";
 import { SectionGradient } from "../ui/section-gradient";
 import Image from "next/image";
+import { useInView } from "motion/react";
+import { useRef } from "react";
+import { inView } from "motion";
 
 export const AppIntegration = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  const isInView = useInView(sectionRef, {
+    once: true,
+    amount: 0.2,
+  });
+
   return (
     <section
       aria-labelledby="app-heading"
@@ -10,15 +21,24 @@ export const AppIntegration = () => {
       className="section"
     >
       <div className="wrapper">
-        <div>
+        <div ref={sectionRef}>
           <h2 id="app-heading" className="section-title text-black">
             App <br /> integration
           </h2>
 
-          <SectionGradient id="app-desc">
-            Connect your go-to apps effortlessly within the builder for a smooth
-            and uninterrupted workflow.
-          </SectionGradient>
+          <div
+            data-anim-ctrl={isInView}
+            style={
+              {
+                "--ball-offset": "-48px",
+              } as React.CSSProperties
+            }
+          >
+            <SectionGradient id="app-desc">
+              Connect your go-to apps effortlessly within the builder for a
+              smooth and uninterrupted workflow.
+            </SectionGradient>
+          </div>
         </div>
         <div className="grid grid-cols-4 md:grid-cols-6 gap-[1px] app-tile">
           {APP_INTEGRATION_DATA.map((Icon, index) => {

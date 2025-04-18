@@ -1,0 +1,140 @@
+.perf-parent:hover .perf-child {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Default state of the child (hidden or off-screen) */
+.perf-child {
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.launch-after {
+  @apply after:absolute after:bg-gradient-to-r after:from-transparent after:to-black  after:h-full lap:after:h-[120%] after:top-1/2 after:transform after:-translate-y-1/2  after:w-[15%] md:after:w-[20%] after:right-0 after:z-[5];
+}
+
+.launch-before {
+  @apply before:absolute before:bg-gradient-to-r before:from-black before:to-transparent  before:h-full lap:before:h-[120%] before:top-1/2 before:transform before:-translate-y-1/2  before:w-[15%] md:before:w-[20%] before:-left-1 before:z-[5];
+}
+
+.launch-marquee {
+  animation: marquee var(--duration) running var(--direction) linear infinite;
+}
+
+.app-tile:has(.app-tile-item:hover) .app-tile-item:not(:hover) {
+  @apply blur-[3px];
+}
+
+.nav-menu-cnt {
+}
+
+.home-image-anim {
+  @apply opacity-0 animate-fade-in;
+  animation-fill-mode: both;
+  animation-delay: 500ms;
+}
+
+.nav-menu-cnt[data-motion="from-start"] {
+  @apply animate-enter-from-left;
+}
+
+.nav-menu-cnt[data-motion="from-end"] {
+  @apply animate-enter-from-right;
+}
+
+.nav-menu-cnt[data-motion="to-start"] {
+  @apply animate-exit-to-left;
+}
+
+.nav-menu-cnt[data-motion="to-end"] {
+  @apply animate-exit-to-right;
+}
+
+.nav-menu-vwpt {
+  @apply relative mt-2.5 bg-white/86 !backdrop-blur-lg data-[state=closed]:animate-fade-out  h-[var(--radix-navigation-menu-viewport-height)] duration-300 overflow-hidden rounded-2xl transition-[height,_width]  data-[state=open]:animate-slideDown;
+  width: var(--radix-navigation-menu-viewport-width);
+}
+
+.section-title {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-title::after {
+  content: "";
+  @apply absolute top-0 left-0 h-[250%] w-full  ease-out transition-transform duration-300 opacity-68 z-10;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 0) 3%,
+    var(--background) 4%
+  );
+  transform-origin: left center;
+}
+
+.no-scrollbar * {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.section-grad-line {
+  @apply absolute h-[1px] w-full  origin-left bg-no-repeat;
+  background-size: 0% 100%;
+  background-image: linear-gradient(
+    90deg,
+    rgba(86, 65, 243, 0) 0%,
+    var(--color-royal) 62%,
+    var(--color-royal) 100%
+  );
+}
+
+.sec-grad-hl {
+  @apply min-h-12 h-[calc(100%_-_17px)] w-[1px] bg-royal origin-top;
+  transform: translateY(-100%);
+}
+
+.sec-grad-ball {
+  @apply relative -left-[7.5px] bg-royal w-[15px] h-[15px] rounded-2xl object-center;
+  transform: translateY(var(--ball-offset)) scale(0);
+}
+
+[data-anim-ctrl="true"] .sec-grad-hl {
+  animation: anim-sec-hl 700ms both ease-out 1.2s;
+}
+
+[data-anim-ctrl="true"] .section-grad-line {
+  animation: anim-sec-gl 1s both ease-in-out 200ms;
+}
+
+[data-anim-ctrl="true"] .sec-grad-ball {
+  animation: anim-sec-ball 500ms both linear 1.3s;
+}
+
+@keyframes anim-sec-gl {
+  0% {
+    background-size: 0% 100%;
+  }
+
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+@keyframes anim-sec-hl {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes anim-sec-ball {
+  0% {
+    transform: translateY(var(--ball-offset)) scale(0);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}

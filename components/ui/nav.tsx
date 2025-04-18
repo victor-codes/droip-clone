@@ -9,6 +9,7 @@ import { ChevronDownIcon } from "lucide-react";
 import {
   NavigationMenuContent,
   NavigationMenuItem,
+  NavigationMenuLink,
   NavigationMenuTrigger,
 } from "@radix-ui/react-navigation-menu";
 import { useId } from "react";
@@ -27,23 +28,20 @@ export const NavItemWithDropdown = ({ label, subMenu }: NavItemProps) => {
         </div>
       </NavigationMenuTrigger>
 
-      <NavigationMenuContent>
-        <div className="absolute left-0 mt-2.5 w-max backdrop-blur-lg   bg-white/86 rounded-xl  p-6 grid grid-cols-2  gap-x-4.5 gap-y-2  z-50">
+      <NavigationMenuContent className="nav-menu-cnt">
+        <div className="w-max  rounded-xl  p-6 grid grid-cols-2  gap-x-4.5 gap-y-2  z-50">
           {/* todo: change to key to link from href */}
           {subMenu!.map(({ icon: Icon, label, description }, idx) => (
-            <div
+            <NavigationMenuLink
               key={idx}
-              className="flex items-start gap-6 min-w-[304px] hover:bg-royal-100  rounded-2xl p-4 transition"
+              className="flex items-start gap-6 min-w-[304px] hover:bg-royal-100 rounded-2xl p-4"
             >
-              {/* <div className="w-6 h-6"> */}
               <Icon />
-              {/* </div> */}
-
               <div className="text-black space-y-0.5">
                 <p className="font-semibold  leading-none text-base">{label}</p>
                 <p className="text-xs font-normal opacity-70">{description}</p>
               </div>
-            </div>
+            </NavigationMenuLink>
           ))}
         </div>
       </NavigationMenuContent>
@@ -56,20 +54,23 @@ export const MobileNavItemWithDropdown = ({ label, subMenu }: NavItemProps) => {
   return (
     <AccordionItem value={id} className="py-4 border-b border-[#5641f333]">
       <AccordionHeader>
-        <AccordionTrigger className="group flex gap-x-1  items-center text-lg w-full ">
+        <AccordionTrigger className="group flex gap-x-1  items-center text-lg leading-tight w-full ">
           {label}
-          <div className="flex items-center  justify-center w-3 h-3">
+          <div className="flex items-center  justify-center">
             <ChevronDownIcon
-              className="transform scale-150 group-data-[state=open]:rotate-180 transition-transform duration-400 ease-[cubic-bezier(0.25, 1, 0.5, 1)]"
-              width={20}
-              height={20}
+              className="transform group-data-[state=open]:rotate-180 transition-transform duration-400 ease-[cubic-bezier(0.25, 1, 0.5, 1)]"
+              width={18}
+              strokeLinecap="square"
+              strokeLinejoin="miter"
+              height={18}
+              aria-hidden={true}
             />
           </div>
         </AccordionTrigger>
       </AccordionHeader>
 
-      <AccordionContent className="pt-4">
-        <div className="mt-2.5 space-y-1">
+      <AccordionContent className="pt-4 overflow-hidden data-[state=closed]:animate-slideArdUp data-[state=open]:animate-slideArdDown">
+        <div className="space-y-1">
           {subMenu!.map(({ icon: Icon, label }, idx) => (
             <div
               key={idx}

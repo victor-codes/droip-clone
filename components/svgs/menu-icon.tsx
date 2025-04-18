@@ -47,28 +47,6 @@ const MenuIcon = forwardRef<MenuIconHandle, MenuIconProps>(
       };
     });
 
-    // const handleMouseEnter = useCallback(
-    //   (e: React.MouseEvent<HTMLDivElement>) => {
-    //     if (!isControlledRef.current) {
-    //       controls.start("animate");
-    //     } else {
-    //       onMouseEnter?.(e);
-    //     }
-    //   },
-    //   [controls, onMouseEnter]
-    // );
-
-    // const handleMouseLeave = useCallback(
-    //   (e: React.MouseEvent<HTMLDivElement>) => {
-    //     if (!isControlledRef.current) {
-    //       controls.start("normal");
-    //     } else {
-    //       onMouseLeave?.(e);
-    //     }
-    //   },
-    //   [controls, onMouseLeave]
-    // );
-
     useEffect(() => {
       if (isOpen) {
         controls.start("animate");
@@ -79,7 +57,7 @@ const MenuIcon = forwardRef<MenuIconHandle, MenuIconProps>(
     return (
       <div
         className={cx(
-          `cursor-pointer select-none p-2 hover:bg-accent rounded-md transition-colors duration-200 flex items-center justify-center`,
+          "relative cursor-pointer select-none p-2 hover:bg-accent rounded-md transition-colors duration-200 flex items-center justify-center",
           className
         )}
         // onMouseEnter={handleMouseEnter}

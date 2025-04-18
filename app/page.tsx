@@ -14,8 +14,8 @@ export default function Home() {
       <Hero />
       <BeyondOrdinary />
       <CraftInteractions />
-      <PixelPerfect />
       <ScaleBusiness />
+      <PixelPerfect />
       <LowDeps />
       <Performance />
       <AppIntegration />
