@@ -1,25 +1,27 @@
 "use client";
 import useMediaQuery from "@/hooks/use-media-query";
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { EclipseSvg } from "../svgs/eclipse-svg";
 import { AnimatedLines } from "../ui/animated-lines";
 import { SectionLink } from "../ui/section-link";
-import { LaunchWithEase } from "./launch-with-ease";
 
 const lines = ["block", "block", "block", "block", "max-lap:hidden"];
 
 const textLines = ["block", "block", "block", "max-lap:hidden"];
 
+type PixelPerfectProps = {
+  children: React.ReactNode;
+};
 // todo: use animate sequences
-export const PixelPerfect = () => {
+export const PixelPerfect = ({ children }: PixelPerfectProps) => {
   const isLargeScreen = useMediaQuery("(min-width: 992px)");
   const imgGridRef = useRef(null);
   const containerRef = useRef(null);
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const frameRef = useRef<HTMLDivElement>(null);
-  const imageRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const [activeIndex, setActiveIndex] = useState(2);
+  // const scrollContainerRef = useRef<HTMLDivElement>(null);
+  // const frameRef = useRef<HTMLDivElement>(null);
+  // const imageRefs = useRef<(HTMLDivElement | null)[]>([]);
+  // const [activeIndex, setActiveIndex] = useState(2);
 
   const { scrollYProgress } = useScroll({
     target: isLargeScreen ? containerRef : imgGridRef,
@@ -64,64 +66,6 @@ export const PixelPerfect = () => {
     clamp: true,
   });
 
-  // useEffect(() => {
-  //   if (!scrollContainerRef.current || !frameRef.current) return;
-
-  //   let rafId: number | null = null;
-
-  //   const updateFrame = () => {
-  //     if (!scrollContainerRef.current || !frameRef.current) return;
-
-  //     const containerRect = scrollContainerRef.current.getBoundingClientRect();
-  //     const containerCenter = containerRect.top + containerRect.height / 2;
-
-  //     // Find which image is closest to the center
-  //     let closestIndex = 0;
-  //     let closestDistance = Number.POSITIVE_INFINITY;
-
-  //     imageRefs.current.forEach((ref, index) => {
-  //       if (!ref) return;
-
-  //       const rect = ref.getBoundingClientRect();
-  //       const imageCenter = rect.top + rect.height / 2;
-  //       const distance = Math.abs(containerCenter - imageCenter);
-
-  //       if (distance < closestDistance) {
-  //         closestDistance = distance;
-  //         closestIndex = index;
-  //       }
-  //     });
-
-  //     // Update active index
-  //     setActiveIndex(closestIndex);
-
-  //     // Directly set frame dimensions to match the image
-  //     const activeImage = IMAGES_URL[closestIndex];
-  //     const padding = 20;
-
-  //     if (frameRef.current) {
-  //       // Set frame dimensions directly without animation
-  //       frameRef.current.style.width = `${activeImage.width + padding}px`;
-  //       frameRef.current.style.height = `${activeImage.height + padding}px`;
-
-  //       // Add transition for smooth resizing
-  //       frameRef.current.style.transition =
-  //         "width 0.3s ease-out, height 0.3s ease-out";
-  //     }
-
-  //     // Continue updating on scroll
-  //     rafId = requestAnimationFrame(updateFrame);
-  //   };
-
-  //   // Start updating
-  //   rafId = requestAnimationFrame(updateFrame);
-
-  //   // Cleanup
-  //   return () => {
-  //     if (rafId) cancelAnimationFrame(rafId);
-  //   };
-  // }, []);
-
   return (
     <motion.div style={{ backgroundColor: bgColor }}>
       <section
@@ -143,7 +87,7 @@ export const PixelPerfect = () => {
               </AnimatedLines>
             </motion.div>
 
-            <section
+            <div
               ref={imgGridRef}
               className="w-full lap:w-auto order-3 h-[300dvh]  lap:order-none"
             >
@@ -211,7 +155,7 @@ export const PixelPerfect = () => {
                   </motion.h3>
                 </div>
               </div>
-            </section>
+            </div>
 
             <motion.div
               className="flex flex-col gap-y-4.5 lap:gap-y-8 max-w-[500px] lap:max-w-[316px] lap:mt-[448px]"
@@ -238,7 +182,7 @@ export const PixelPerfect = () => {
       </section>
 
       <motion.div className="-mt-[330px]" style={{ y: launchY }}>
-        <LaunchWithEase />
+        {children}
       </motion.div>
     </motion.div>
   );

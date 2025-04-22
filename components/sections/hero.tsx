@@ -1,21 +1,8 @@
-"use client";
 import { CirclePlayIcon } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import { ArrowRightIcon } from "../svgs/arrow-right";
+import { CtaBtn } from "../ui/cta-btn";
 
 export const Hero = () => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
   return (
     <section aria-labelledby="hero-heading" aria-describedby="hero-desc">
       <div className="wrapper pt-[68px] pb-16 md:pb-18 lap:pb-32">
@@ -28,13 +15,12 @@ export const Hero = () => {
 
           <div className="flex flex-col md:flex-row lap:items-center lap:justify-between gap-y-12 mt-6 md:mt-12 mb-15 md:mb-24 ">
             <div>
-              {/* text-balance */}
               <h1 id="hero-heading" className="max-md:max-w-[400px]">
-                Break Limits. Build{" "}
+                Break Limits. Build&nbsp;
                 <strong className="font-medium text-royal inline tracking-[-3px] lap:tracking-[-5px]">
-                  Anything
+                  Anything.
                 </strong>
-                . No Code Needed.
+                &nbsp; &nbsp; No Code Needed.
               </h1>
             </div>
 
@@ -59,19 +45,7 @@ export const Hero = () => {
                 </button>
               </div>
               <div>
-                <Link
-                  href="#"
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                  className="group relative h-11 flex space-x-[5px] justify-center px-11 py-2 rounded-18 text-white mt-1"
-                >
-                  <span className="lap:text-[18px] relative z-[1]">
-                    Get started with Droip
-                  </span>
-
-                  <ArrowRightIcon isHovered={isHovered} size={18} />
-                  <div className="absolute  transition-transform ease-out duration-300 w-full h-full rounded-18 top-1/2 transform -translate-y-1/2 left-0  bg-royal py-2 px-4 group-hover:scale-y-[1.18] group-hover:bg-royal-500  group-hover:scale-x-[0.98]" />
-                </Link>
+                <CtaBtn> Get started with Droip</CtaBtn>
               </div>
             </div>
           </div>

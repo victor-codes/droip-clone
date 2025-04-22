@@ -9,6 +9,7 @@ export const Footer = () => {
   const firstIdxExclude = footerData.slice(1);
 
   const [year] = useState(new Date().getFullYear());
+  
   return (
     <footer
       aria-label="Site Footer"

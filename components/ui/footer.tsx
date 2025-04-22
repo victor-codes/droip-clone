@@ -1,11 +1,11 @@
 "use client";
 import { footerData } from "@/contents/footer";
+import { useLerpMousePosition } from "@/hooks/use-lerp-mos-pos";
 import { cx } from "@/lib";
 import { FooterColumnProps, SocialsProps } from "@/types/footer";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
-import { ArrowRightIcon } from "../svgs/arrow-right";
-import { useLerpMousePosition } from "@/hooks/use-lerp-mos-pos";
+import { useEffect, useRef } from "react";
+import { CtaBtn } from "./cta-btn";
 
 export const FooterColumn = ({ title, links }: FooterColumnProps) => {
   return (
@@ -75,14 +75,10 @@ export const Socials = ({ isMobile }: SocialsProps) => {
 };
 
 export const FooterOnboard = () => {
-  const [isHovered, setIsHovered] = useState(false);
-
   const { lerped, onMouseMove, setTarget, setLerped } =
     useLerpMousePosition(0.1);
 
   const ref = useRef<HTMLDivElement>(null);
-
-  // todo: look into the link animation
 
   useEffect(() => {
     if (!ref.current) return;
@@ -91,14 +87,6 @@ export const FooterOnboard = () => {
     setTarget(center);
     setLerped(center);
   }, [setTarget, setLerped]);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
 
   return (
     <section>
@@ -117,19 +105,7 @@ export const FooterOnboard = () => {
               Experience the power of Droip no-code website builder, risk free.
               Create stunning, responsive sites with pure creative freedom.
             </p>
-
-            <Link
-              href="#"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              className="group relative h-11 flex space-x-[5px] justify-center px-11 py-2 rounded-18 text-white"
-            >
-              <span className="lap:text-[18px] relative z-[1]">
-                Try for Free
-              </span>{" "}
-              <ArrowRightIcon isHovered={isHovered} size={18} />
-              <div className="absolute   transition-transform ease-out duration-300 w-full h-full rounded-xl top-1/2 transform -translate-y-1/2 left-0  bg-royal py-2 px-4 group-hover:scale-y-[1.18] group-hover:bg-royal-500 group-hover:scale-x-[0.98]" />
-            </Link>
+            <CtaBtn>Try for Free</CtaBtn>
           </div>
           <div
             style={{

@@ -2,7 +2,7 @@
 
 import { cx } from "@/lib";
 import { motion, useInView, Variants } from "motion/react";
-import { ReactNode, useRef, useState } from "react";
+import { ReactNode, useRef } from "react";
 
 interface AnimatedLinesProps {
   children?: ReactNode;
@@ -16,7 +16,7 @@ interface AnimatedLinesProps {
 
 export const AnimatedLines = ({
   children,
-  staggerDelay = 0.2,
+  staggerDelay = 0.3,
   duration = 0.8,
   className = "",
   lineClassName = "",
@@ -46,7 +46,7 @@ export const AnimatedLines = ({
     >
       {children}
       <motion.div
-        className="absolute flex flex-col top-0 w-full z-[1] h-full"
+        className="absolute pointer-events-none flex flex-col top-0 w-full z-[1] h-full"
         variants={{
           hidden: {},
           visible: {
