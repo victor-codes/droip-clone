@@ -75,18 +75,7 @@ export const Socials = ({ isMobile }: SocialsProps) => {
 };
 
 export const FooterOnboard = () => {
-  const { lerped, onMouseMove, setTarget, setLerped } =
-    useLerpMousePosition(0.1);
-
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!ref.current) return;
-    const bounds = ref.current.getBoundingClientRect();
-    const center = { x: bounds.width / 2, y: bounds.height / 2 };
-    setTarget(center);
-    setLerped(center);
-  }, [setTarget, setLerped]);
+  const { ref, lerped, onMouseMove } = useLerpMousePosition(0.1);
 
   return (
     <section>

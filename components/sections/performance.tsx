@@ -7,17 +7,7 @@ import { AnimatedLines } from "../ui/animated-lines";
 const lines = ["block", "block"];
 
 export const Performance = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  const { lerped, onMouseMove, setTarget, setLerped } =
-    useLerpMousePosition(0.3);
-
-  useEffect(() => {
-    if (!ref.current) return;
-    const bounds = ref.current.getBoundingClientRect();
-    const center = { x: bounds.width / 2, y: bounds.height / 2 };
-    setTarget(center);
-    setLerped(center);
-  }, [setTarget, setLerped]);
+  const { ref, lerped, onMouseMove } = useLerpMousePosition(0.1);
 
   return (
     <section aria-labelledby="perf-heading">
